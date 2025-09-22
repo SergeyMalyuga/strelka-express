@@ -1,8 +1,70 @@
-@use "../../node_modules/normalize.css";
-@use "fonts";
+@use '../../node_modules/normalize.css';
+@use './variables';
+@use 'fonts';
 
-.main-header {
+body {
+  font-family: variables.$main-font-family;
+  font-size: variables.$main-font-size;
+  color: variables.$main-text-color;
+}
+
+.header__container {
   display: flex;
   width: 100%;
   background-color: rgb(245 245 245 / 100%);
+  justify-content: center;
+  align-items: center;
+  padding-top: 24.84px;
+  padding-bottom: 11.05px;
+}
+
+.logo-image {
+  margin-inline-end: 10px;
+}
+
+.logo-link {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: variables.$main-text-color;
+  line-height: 38.4px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8.5px;
+}
+
+.main-title, .main-title__description {
+  font-size: variables.$main-font-size;
+  font-weight: bold;
+  margin: 0;
+}
+
+.main-header__nav {
+  padding-block: 10px;
+background-color: variables.$accent-background-color;
+}
+
+.main-header__nav-list {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  list-style: none;
+  gap: 32px;
+}
+
+.main-header__nav-link {
+  display: block;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px transparent solid;
+  color: variables.$light-text-color;
+  background-color: rgb(255 255 255 / 15%);
+  padding: 8px 12px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
 }
