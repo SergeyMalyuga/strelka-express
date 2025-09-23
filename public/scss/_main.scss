@@ -2,6 +2,7 @@
 @use './variables';
 @use 'fonts';
 
+
 body {
   font-family: variables.$main-font-family;
   font-size: variables.$main-font-size;
@@ -16,10 +17,16 @@ body {
   align-items: center;
   padding-top: 24.84px;
   padding-bottom: 11.05px;
+  gap: 92px;
+}
+
+.logo-wrapper {
+  display: flex;
 }
 
 .logo-image {
   margin-inline-end: 10px;
+align-self: center;
 }
 
 .logo-link {
@@ -33,6 +40,7 @@ body {
 }
 
 .title-wrapper {
+  letter-spacing: -0.06em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +55,7 @@ body {
 
 .main-header__nav {
   padding-block: 10px;
-background-color: variables.$accent-background-color;
+  background-color: variables.$accent-background-color;
 }
 
 .main-header__nav-list {
@@ -56,6 +64,7 @@ background-color: variables.$accent-background-color;
   justify-content: center;
   list-style: none;
   gap: 32px;
+  padding: 0;
 }
 
 .main-header__nav-link {
@@ -68,3 +77,50 @@ background-color: variables.$accent-background-color;
   padding: 8px 12px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
 }
+
+.contacts {
+  display: flex;
+}
+
+.contacts__phone{
+  display: flex;
+  flex-direction: column;
+  gap: 0.86px;
+}
+
+.contacts__phone-number {
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  color: variables.$main-text-color;
+}
+
+.contacts__phone-schedule {
+  display: flex;
+  justify-content: center;
+  gap: 6.70px;
+  position: relative;
+  text-decoration: none;
+  color: rgb(38 175 0 / 100%);
+  font-family: variables.$main-font-family;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.57px;
+}
+
+.contacts__phone-schedule::before {
+  content: "";
+  display: inline-block;
+  height: 17px;
+  width: 19.44px;
+  background-image: url("../images/toggle-header.svg");
+}
+
+.contacts__social-list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+
