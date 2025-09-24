@@ -7,6 +7,22 @@ body {
   font-family: variables.$main-font-family;
   font-size: variables.$main-font-size;
   color: variables.$main-text-color;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+ul {
+  padding: 0;
 }
 
 .header__container {
@@ -16,7 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 24.84px;
-  padding-bottom: 11.05px;
+  padding-bottom: 9.46px;
   gap: 92px;
 }
 
@@ -26,7 +42,7 @@ body {
 
 .logo-image {
   margin-inline-end: 10px;
-align-self: center;
+  align-self: center;
 }
 
 .logo-link {
@@ -50,7 +66,22 @@ align-self: center;
 .main-title, .main-title__description {
   font-size: variables.$main-font-size;
   font-weight: bold;
+  min-block-size: 20.8px;
   margin: 0;
+}
+
+.main-title {
+  min-inline-size: 337.58px;
+  text-align: center;
+}
+
+.main-title__description {
+  min-inline-size: 270.72px;
+}
+
+.linebottom {
+  block-size: 1px;
+  background-color: rgb(214 231 255 / 100%);
 }
 
 .main-header__nav {
@@ -64,7 +95,6 @@ align-self: center;
   justify-content: center;
   list-style: none;
   gap: 32px;
-  padding: 0;
 }
 
 .main-header__nav-link {
@@ -76,16 +106,24 @@ align-self: center;
   background-color: rgb(255 255 255 / 15%);
   padding: 8px 12px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
+  transition: transform 0.3s;
+
+}
+
+.main-header__nav-link:hover {
+  transform: scale(1.1);
+  background-color: rgb(255 255 255 / 30%);
 }
 
 .contacts {
   display: flex;
+  gap: 32.67px;
 }
 
-.contacts__phone{
+.contacts__phone {
   display: flex;
   flex-direction: column;
-  gap: 0.86px;
+  gap: 3.5px;
 }
 
 .contacts__phone-number {
@@ -121,6 +159,14 @@ align-self: center;
   margin: 0;
   display: flex;
   gap: 10px;
+}
+
+.order {
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-block-size: 960px;
 }
 
 
