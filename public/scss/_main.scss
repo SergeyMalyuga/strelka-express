@@ -131,11 +131,21 @@ ul {
   font-size: 19px;
   font-weight: bold;
   color: variables.$main-text-color;
+  transition: transform 0.3s;
+  will-change: transform;
+}
+
+.contacts__phone-number:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+  color: variables.$light-text-color;
+  background-color: variables.$main-text-color;
 }
 
 .contacts__phone-schedule {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 6.70px;
   position: relative;
   text-decoration: none;
@@ -144,6 +154,13 @@ ul {
   font-size: 13px;
   font-weight: 400;
   line-height: 18.57px;
+  transition: transform 0.3s ease;
+}
+
+.contacts__phone-schedule:hover {
+  background-color: rgb(40 172 6);
+  color: variables.$light-text-color;
+  border-radius: 5px;
 }
 
 .contacts__phone-schedule::before {
@@ -154,11 +171,23 @@ ul {
   background-image: url("../images/toggle-header.svg");
 }
 
+.contacts__phone-schedule:hover::before {
+  background-image: url("../images/toggle-header-white.svg");
+}
+
 .contacts__social-list {
   list-style: none;
   margin: 0;
   display: flex;
   gap: 10px;
+}
+
+.contacts__social-item {
+  transition: transform 0.3s ease;
+}
+
+.contacts__social-item:hover {
+  transform: scale(1.1);
 }
 
 .order {
