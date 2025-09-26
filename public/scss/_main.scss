@@ -198,4 +198,31 @@ ul {
   min-block-size: 960px;
 }
 
+.order-form {
+  display: inline-block;
+  color: variables.$light-text-color;
+  box-sizing: border-box;
+  border: 3px solid variables.$light-text-color;
+  border-radius: 15px;
+  padding: 38px 28px;
+}
 
+.order-form__input {
+  display: block;
+}
+
+.order-form__services-label {
+  display: block;
+}
+
+.order-form__fieldset {
+  border: none;
+}
+
+.policy__link {
+  color: variables.$light-text-color;
+  text-decoration: underline variables.$light-text-color dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
+  text-underline-position: under;
+}
