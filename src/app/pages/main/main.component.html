@@ -1,8 +1,10 @@
 <header class="main-header">
   <div class="header__container">
     <div class="logo-wrapper">
-      <img class="logo-image" src="./images/logo.svg" alt="Логотип компании">
-      <a class="logo-link" href="#" aria-label="StrelkaExpress - главная страница">StrelkaExpress</a>
+      <img class="logo-image" src="./images/logo.svg" alt="Логотип компании" />
+      <a class="logo-link" href="#" aria-label="StrelkaExpress - главная страница"
+        >StrelkaExpress</a
+      >
     </div>
     <div class="title-wrapper">
       <h1 class="main-title">Служба доставки в Нижнем Новгороде.</h1>
@@ -15,13 +17,17 @@
       </div>
       <div class="contacts__social">
         <ul class="contacts__social-list">
-          <li class="contacts__social-item"><a href="#" aria-label="Наша страница ВКонтакте"><img src="./images/vk.svg"></a>
+          <li class="contacts__social-item">
+            <a href="#" aria-label="Наша страница ВКонтакте"><img src="./images/vk.svg" /></a>
           </li>
-          <li class="contacts__social-item"><a href="#" aria-label="Наша страница WhatsApp"><img
-            src="./images/whatsApp.svg"></a></li>
-          <li class="contacts__social-item"><a href="#" aria-label="Наша страница Telegram"><img
-            src="./images/telegram.svg"></a></li>
-          <li class="contacts__social-item"><a href="#" aria-label="Наша страница Авито"><img src="./images/avito.svg"></a>
+          <li class="contacts__social-item">
+            <a href="#" aria-label="Наша страница WhatsApp"><img src="./images/whatsApp.svg" /></a>
+          </li>
+          <li class="contacts__social-item">
+            <a href="#" aria-label="Наша страница Telegram"><img src="./images/telegram.svg" /></a>
+          </li>
+          <li class="contacts__social-item">
+            <a href="#" aria-label="Наша страница Авито"><img src="./images/avito.svg" /></a>
           </li>
         </ul>
       </div>
@@ -30,12 +36,20 @@
   <div class="linebottom"></div>
   <nav class="main-header__nav">
     <ul class="main-header__nav-list">
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Виды доставки</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Фулфилмент</a></li>
+      <li class="main-header__nav-item">
+        <a href="#" class="main-header__nav-link">Виды доставки</a>
+      </li>
+      <li class="main-header__nav-item">
+        <a href="#" class="main-header__nav-link">Фулфилмент</a>
+      </li>
       <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Тарифы</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Как заказать</a></li>
+      <li class="main-header__nav-item">
+        <a href="#" class="main-header__nav-link">Как заказать</a>
+      </li>
       <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Отзывы</a></li>
-      <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Вопросы и ответы</a></li>
+      <li class="main-header__nav-item">
+        <a href="#" class="main-header__nav-link">Вопросы и ответы</a>
+      </li>
       <li class="main-header__nav-item"><a href="#" class="main-header__nav-link">Контакты</a></li>
     </ul>
   </nav>
@@ -46,25 +60,71 @@
       <fieldset class="order-form__contact-information order-form__fieldset">
         <legend class="order-form__title">Заказать доставку</legend>
         <label for="name">Имя</label>
-        <input id="name" class="order-form__name order-form__input" type="text"/>
+        <input id="name" class="order-form__name order-form__input" type="text" />
         <label for="phone">Номер телефона<sup>*</sup></label>
-        <input id="phone" type="tel" pattern="[\+\d\s\-\(\)]+" placeholder="+7 (___) ___-__-__" class="order-form__phone order-form__input"/>
+        <input
+          id="phone"
+          type="tel"
+          pattern="[\+\d\s\-\(\)]+"
+          placeholder="+7 (___) ___-__-__"
+          class="order-form__phone order-form__input"
+        />
       </fieldset>
       <fieldset class="order-form__services order-form__fieldset">
         <legend class="order-form__title">Интересующая услуга</legend>
-        <label class="order-form__services-label"><input type="checkbox" name="service[]" value="Доставка по Нижнему Новгороду"/>Доставка по
-          Нижнему Новгороду</label>
-        <label class="order-form__services-label"><input type="checkbox" name="service[]" value="Доставка междугородняя"/>Доставка междугородняя</label>
-        <label class="order-form__services-label"><input type="checkbox" name="service[]" value="Фулфилмент"/>Фулфилмент</label>
-        <label class="order-form__services-label"><input type="checkbox" name="service[]" value="Доставка на склады маркетплейсов"/>Доставка на
-          склады маркетплейсов</label>
+        <label class="order-form__services-label"
+          ><input type="checkbox" name="service[]" value="Доставка по Нижнему Новгороду" />Доставка
+          по Нижнему Новгороду</label
+        >
+        <label class="order-form__services-label"
+          ><input type="checkbox" name="service[]" value="Доставка междугородняя" />Доставка
+          междугородняя</label
+        >
+        <label class="order-form__services-label"
+          ><input type="checkbox" name="service[]" value="Фулфилмент" />Фулфилмент</label
+        >
+        <label class="order-form__services-label"
+          ><input
+            type="checkbox"
+            name="service[]"
+            value="Доставка на склады маркетплейсов"
+          />Доставка на склады маркетплейсов</label
+        >
       </fieldset>
       <button class="order-form__submit" type="submit">Отправить заявку</button>
       <div class="policy">
         <p>Нажимая кнопку, вы даете согласие на</p>
-        <a class="policy__link " href="#" aria-label="Политика в отношении обработки персональных данных">обработку персональных данных</a>
+        <a
+          class="policy__link"
+          href="#"
+          aria-label="Политика в отношении обработки персональных данных"
+          >обработку персональных данных</a
+        >
       </div>
     </form>
+    <div class="order__container">
+      <div class="order__description">
+        <h2>Доставка грузов. Быстро и безопасно!</h2>
+        <p>
+          Доставим <strong>любой</strong> груз по <strong>Нижнему Новгороду</strong> и не только!
+        </p>
+        <p>Работаем с <strong>2012</strong> года.</p>
+      </div>
+      <div class="order__social-contacts">
+        <div class="order__social-whatsapp">
+          <p class="order__social-title">Связаться в <strong>WhatsApp</strong></p>
+          <a class="order__social-link"
+            ><img src="./images/whatsapp-2.svg" alt="WhatsApp" width="48.47" height="47.98"
+          /></a>
+        </div>
+        <div class="order__social-telegram">
+          <p class="order__social-title">Связаться в <strong>Telegram</strong></p>
+          <a class="order__social-link"
+            ><img src="./images/telegram-2.svg" alt="Telegram" width="76.8" height="47.98"
+          /></a>
+        </div>
+      </div>
+    </div>
   </section>
   <section class="fulfillment"></section>
   <section class="tariff"></section>
@@ -73,4 +133,3 @@
   <section class="questions"></section>
 </main>
 <footer class="main-footer"></footer>
-

@@ -2,7 +2,6 @@
 @use './variables';
 @use 'fonts';
 
-
 body {
   font-family: variables.$main-font-family;
   font-size: variables.$main-font-size;
@@ -63,7 +62,8 @@ ul {
   gap: 8.5px;
 }
 
-.main-title, .main-title__description {
+.main-title,
+.main-title__description {
   font-size: variables.$main-font-size;
   font-weight: bold;
   min-block-size: 20.8px;
@@ -107,7 +107,6 @@ ul {
   padding: 8px 12px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
   transition: transform 0.3s;
-
 }
 
 .main-header__nav-link:hover {
@@ -146,7 +145,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6.70px;
+  gap: 6.7px;
   position: relative;
   text-decoration: none;
   color: rgb(38 175 0 / 100%);
@@ -164,15 +163,15 @@ ul {
 }
 
 .contacts__phone-schedule::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 17px;
   width: 19.44px;
-  background-image: url("../images/toggle-header.svg");
+  background-image: url('../images/toggle-header.svg');
 }
 
 .contacts__phone-schedule:hover::before {
-  background-image: url("../images/toggle-header-white.svg");
+  background-image: url('../images/toggle-header-white.svg');
 }
 
 .contacts__social-list {
@@ -191,11 +190,57 @@ ul {
 }
 
 .order {
-  background-image: url("../images/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-block-size: 960px;
+}
+
+.order__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.order__social-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 95.98px;
+}
+
+.order__social-whatsapp,
+.order__social-telegram {
+  width: 215px;
+}
+
+.order__social-title {
+  color: variables.$light-text-color;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.order__social-link {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.order__description h2 {
+  display: inline-block;
+  color: variables.$light-text-color;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 39.6px;
+  letter-spacing: 0;
+  text-align: left;
+  width: 424.64px;
 }
 
 .order-form {
@@ -205,6 +250,7 @@ ul {
   border: 3px solid variables.$light-text-color;
   border-radius: 15px;
   padding: 38px 28px;
+  margin-right: 138.72px;
 }
 
 .order-form__input {
