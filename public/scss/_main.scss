@@ -2,6 +2,10 @@
 @use './variables';
 @use 'fonts';
 
+::before, ::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: variables.$main-font-family;
   font-size: variables.$main-font-size;
@@ -249,20 +253,135 @@ ul {
   box-sizing: border-box;
   border: 3px solid variables.$light-text-color;
   border-radius: 15px;
-  padding: 38px 28px;
+  padding: 37px 25px;
+  width: 384px;
   margin-right: 138.72px;
+}
+
+.order-form__contact-title {
+  color: variables.$light-text-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20.6px;
+}
+
+.order-form__label-name, .order-form__label-phone, .order-form__services-title {
+  display: inline-block;
+  color: variables.$light-text-color;
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 7px;
 }
 
 .order-form__input {
   display: block;
+  padding: 12px 12px 12px 40px;
+  box-sizing: border-box;
+  width: 328px;
+  border: 1px solid rgb(230 105 30 / 25%);
+  border-radius: 8px;
+  background: variables.$light-text-color;
+  margin-bottom: 24px;
+}
+
+.order-form__name, .order-form__phone {
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: center;
+}
+
+.order-form__name {
+  background-image: url('../images/user-card.svg');
+}
+
+.order-form__phone {
+background-image: url('../images/phone.svg');
 }
 
 .order-form__services-label {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 9.7px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.86px;
+  letter-spacing: 0;
+  text-align: left;
 }
 
 .order-form__fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.order-form__services-label::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgb(0 0 0 / 25%);
+  border-radius: 2px;
+  background: variables.$light-text-color;
+}
+
+.order-form__services-label:not(:last-child)::before {
+  margin-bottom: 8.54px;
+}
+
+.order-form__services {
+  margin-bottom: 36.84px;
+}
+
+.order-form__submit {
+  display: block;
+  border: none;
+  box-sizing: border-box;
+  padding: 16px 35px;
+  color: variables.$light-text-color;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24.29px;
+  letter-spacing: 0;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px 0 rgb(230 105 30 / 40%);
+  background: rgb(230 105 30 / 95%);
+  width: 228px;
+  margin: 0 auto 16px;
+}
+
+.policy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.policy p {
+  margin: 0;
+}
+
+.policy p, a {
+  color: variables.$light-text-color;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 18.29px;
+  letter-spacing: 0;
 }
 
 .policy__link {

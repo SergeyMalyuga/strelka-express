@@ -58,10 +58,10 @@
   <section class="order">
     <form class="order-form">
       <fieldset class="order-form__contact-information order-form__fieldset">
-        <legend class="order-form__title">Заказать доставку</legend>
-        <label for="name">Имя</label>
+        <legend class="order-form__contact-title">Заказать доставку</legend>
+        <label for="name" class="order-form__label-name">Имя</label>
         <input id="name" class="order-form__name order-form__input" type="text" />
-        <label for="phone">Номер телефона<sup>*</sup></label>
+        <label for="phone" class="order-form__label-phone">Номер телефона<sup>*</sup></label>
         <input
           id="phone"
           type="tel"
@@ -71,7 +71,7 @@
         />
       </fieldset>
       <fieldset class="order-form__services order-form__fieldset">
-        <legend class="order-form__title">Интересующая услуга</legend>
+        <legend class="order-form__services-title">Интересующая услуга</legend>
         <label class="order-form__services-label"
           ><input type="checkbox" name="service[]" value="Доставка по Нижнему Новгороду" />Доставка
           по Нижнему Новгороду</label
@@ -88,7 +88,7 @@
             type="checkbox"
             name="service[]"
             value="Доставка на склады маркетплейсов"
-          />Доставка на склады маркетплейсов</label
+          />Доставка на склады МП</label
         >
       </fieldset>
       <button class="order-form__submit" type="submit">Отправить заявку</button>
