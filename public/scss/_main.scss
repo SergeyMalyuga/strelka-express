@@ -13,6 +13,10 @@ body {
   box-sizing: border-box;
 }
 
+em {
+  font-style: normal;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -108,9 +112,14 @@ ul {
   border: 1px transparent solid;
   color: variables.$light-text-color;
   background-color: rgb(255 255 255 / 15%);
-  padding: 8px 12px;
+  padding: 5px 12px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
   transition: transform 0.3s;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24.29px;
+  letter-spacing: 0;
+  text-align: center;
 }
 
 .main-header__nav-link:hover {
@@ -194,19 +203,24 @@ ul {
 }
 
 .order {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center 71%;
+  min-block-size: 960px;
+}
+
+.order__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-block-size: 960px;
 }
 
 .order__container {
   display: flex;
   flex-direction: column;
+  width: 590px;
 }
 
 .order__social-contacts {
@@ -245,6 +259,35 @@ ul {
   letter-spacing: 0;
   text-align: left;
   width: 424.64px;
+  margin: 0 0 25.59px;
+}
+
+.order__description p {
+  color: variables.$light-text-color;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.policy p {
+  margin: 0;
+}
+
+.policy p, .policy a {
+  color: variables.$light-text-color;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 18.29px;
+  letter-spacing: 0;
+}
+
+.order__description p:nth-of-type(1) {
+  margin: 0 0 15px;
+}
+
+.order__description p:nth-of-type(2) {
+  margin: 0 0 166px;
 }
 
 .order-form {
@@ -352,7 +395,7 @@ input[type="checkbox"] {
   display: block;
   border: none;
   box-sizing: border-box;
-  padding: 16px 35px;
+  padding: 14px 35px;
   color: variables.$light-text-color;
   font-size: 17px;
   font-weight: 400;
@@ -372,22 +415,28 @@ input[type="checkbox"] {
   align-items: center;
 }
 
-.policy p {
-  margin: 0;
-}
-
-.policy p, a {
-  color: variables.$light-text-color;
-  font-size: 12.8px;
-  font-weight: 400;
-  line-height: 18.29px;
-  letter-spacing: 0;
-}
-
 .policy__link {
   color: variables.$light-text-color;
   text-decoration: underline variables.$light-text-color dashed;
   text-decoration-thickness: 1px;
   text-underline-offset: 1px;
   text-underline-position: under;
+}
+
+.advantage {
+  background-color: variables.$light-background-color;
+  padding: 60px 0 0;
+}
+
+.advantage__list {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantage__item {
+  text-align: center;
 }
