@@ -1,0 +1,54 @@
+@use "../../../styles/variables";
+
+.delivery-services {
+  background-color: variables.$light-background-color;
+  padding: 42px 0 0;
+
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+  }
+}
+
+.delivery-services h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52.8px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 0 107px;
+}
+
+.delivery-services__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0 0 11px;
+  padding: 0;
+}
+
+.delivery-services__gallery {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.delivery-services__item {
+  width: 268px;
+}
+
+/*.delivery-services__gallery h3, .delivery-services__list h3 {
+  ma
+}*/
+
+
+
