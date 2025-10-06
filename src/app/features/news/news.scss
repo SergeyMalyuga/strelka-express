@@ -1,0 +1,62 @@
+@use "../../../styles/variables";
+
+.news {
+  background-color: variables.$light-background-color;
+}
+
+.news__content {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 32.5px 0 38.5px;
+}
+
+.news h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52.8px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.news__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44.50px;
+}
+
+.news__card-column {
+  width: 545px;
+
+  p {
+    margin: 0 0 38px;
+  }
+
+  h3 {
+    font-size: 19px;
+    margin: 0 0 38px;
+  }
+
+}
+
+.news__card-image {
+  display: block;
+border-radius: 25px;
+}
+
+.slider-pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.slider-pagination__item {
+  width: 10px;
+  height: 10px;
+  background-color: variables.$accent-background-color;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  margin: 0;
+cursor: pointer;
+}
