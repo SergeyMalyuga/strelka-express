@@ -1,0 +1,75 @@
+@use '../../../styles/variables';
+
+.fulfillment {
+  background-color: variables.$light-background-color;
+
+  h2 {
+    width: 840px;
+    margin: 0 auto 68.4px;
+    text-align: center;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 70.4px;
+    letter-spacing: 0;
+  }
+
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 64px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  h4 {
+    margin: 0 0 8px;
+  }
+
+  p {
+    color: variables.$main-text-color-light;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27.2px;
+    letter-spacing: 0;
+  }
+}
+
+.fulfillment__content {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.advantages {
+  margin: 0 0 81px;
+}
+
+.advantages__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.work-process h3 {
+  margin: 0 0 58px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
