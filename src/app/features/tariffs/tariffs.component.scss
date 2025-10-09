@@ -1,0 +1,79 @@
+@use '../../../styles/variables';
+
+.tariffs {
+  background-color: variables.$light-background-color;
+  box-shadow: 0 100px 0 0 variables.$light-background-color;
+  margin-bottom: 100px;
+
+  h2 {
+    margin: 0 0 57.40px;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 48.4px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+.tariffs__content {
+  width: 1140px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0;
+}
+
+.tariffs__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 17px 32px -11px rgb(0 0 0 / 14%);
+  background: rgb(255 255 255 / 100%);
+  padding: 20px;
+  margin-bottom: 15px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.tariffs__item:last-child {
+  margin-bottom: 0;
+}
+
+.tariffs__item-description {
+  width: 567px;
+}
+
+.tariffs__item-link {
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
+  background: rgb(102 51 153 / 90%);
+  color: variables.$light-text-color;
+  font-size: 17px;
+  line-height: 24.29px;
+  padding: 10px 20px;
+}
+
+.conditions {
+  width: 314px;
+}
+
+.conditions__amount {
+  color: variables.$main-text-color;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 41.6px;
+  letter-spacing: 0;
+}
+
+.conditions__dimensions {
+  color: variables.$main-text-color;
+  font-size: 20.8px;
+  font-weight: 400;
+  line-height: 33.28px;
+  letter-spacing: 0;
+}

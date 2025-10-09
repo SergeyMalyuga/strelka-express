@@ -2,6 +2,7 @@
 
 .fulfillment {
   background-color: variables.$light-background-color;
+  box-shadow: 0 107px 0 0 variables.$light-background-color;
 
   h2 {
     width: 840px;
@@ -85,7 +86,7 @@
 
 .fulfillment-info {
   padding: 0;
-  margin: 0;
+  margin: 0 0 107px;
   list-style: none;
 }
 
@@ -98,6 +99,10 @@
   background: rgb(255 255 255 / 100%);
   padding: 20px;
   margin-bottom: 15px;
+}
+
+.fulfillment-info__item p {
+  color: variables.$main-text-color;
 }
 
 .fulfillment-info__item:last-child {
