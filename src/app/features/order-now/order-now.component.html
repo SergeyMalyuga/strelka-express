@@ -1,0 +1,82 @@
+<section class="order-now">
+  <img src="./images/order-now-header.png" width="1920px" height="60px">
+  <h2>Заказать доставку сейчас</h2>
+  <div class="order-now__content">
+    <form class="order-now__form">
+      <fieldset>
+        <legend class="visually-hidden">Контактные данные отправителя</legend>
+        <div class="input-wrapper">
+          <label for="sender-name">Имя отправителя</label>
+          <input id="sender-name" type="text" autocomplete="name">
+        </div>
+        <div class="input-wrapper">
+          <label for="sender-phone">Номер телефона <sup>*</sup></label>
+          <input
+            id="sender-phone"
+            type="tel"
+            name="sender-phone"
+            placeholder="+7 (___) ___-__-__"
+            pattern="[\+\d\s\-\(\)]+"
+            inputmode="tel"
+            autocomplete="tel"
+            maxlength="18"
+            required
+            class="form-input"
+          >
+        </div>
+        <div class="input-wrapper">
+          <label for="sender-address">Откуда забирать</label>
+          <input id="sender-address">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="visually-hidden">Контактные данные получателя</legend>
+        <div class="input-wrapper">
+          <label for="recipient-name">Имя получателя</label>
+          <input id="recipient-name" type="text" autocomplete="name">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="recipient-phone">Номер телефона <sup>*</sup></label>
+          <input
+            id="recipient-phone"
+            type="tel"
+            name="recipient-phone"
+            placeholder="+7 (___) ___-__-__"
+            pattern="[\+\d\s\-\(\)]+"
+            inputmode="tel"
+            autocomplete="tel"
+            maxlength="18"
+            required
+            class="form-input"
+          >
+        </div>
+
+        <div class="input-wrapper">
+          <label for="recipient-address">Куда привезти</label>
+          <input id="recipient-address" type="text" name="address">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="visually-hidden">Дата и время</legend>
+        <div class="input-wrapper">
+          <label class="visually-hidden" for="date">Дата</label>
+          <input id="date" type="date" name="date">
+        </div>
+
+        <div class="input-wrapper">
+          <label class="visually-hidden" for="time">Время</label>
+          <input id="time" type="time" name="time">
+        </div>
+        <button type="submit">Сделать заказ</button>
+      </fieldset>
+
+    </form>
+    <footer class="order-now__footer">
+      <label for="policy">Даю согласие на <a href="">обработку персональных данных</a></label>
+      <input id="policy" type="checkbox">
+    </footer>
+  </div>
+</section>
