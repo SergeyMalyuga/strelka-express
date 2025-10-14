@@ -6,6 +6,7 @@ import { TariffsComponent } from '../../features/tariffs/tariffs.component';
 import { DeliveryOrderComponent } from '../../features/delivery-order/delivery-order.component';
 import { OrderNowComponent } from '../../features/order-now/order-now.component';
 import { PromoComponent } from '../../features/promo/promo.component';
+import { ReviewsComponent } from '../../features/reviews/reviews.component';
 
 @Component({
   selector: 'app-main',
@@ -18,6 +19,7 @@ import { PromoComponent } from '../../features/promo/promo.component';
     DeliveryOrderComponent,
     OrderNowComponent,
     PromoComponent,
+    ReviewsComponent,
   ],
 })
 export class MainComponent {}
