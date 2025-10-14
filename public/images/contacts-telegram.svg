@@ -1,0 +1,9 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.000000" height="40.000000" fill="none" clip-path="url(#clipPath_0)" customFrame="url(#clipPath_0)">
+	<defs>
+		<clipPath id="clipPath_0">
+			<rect width="40.000000" height="40.000000" x="0.000000" y="0.000000" rx="5.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="Container" width="40.000000" height="40.000000" x="0.000000" y="0.000000" rx="5.000000" />
+	<path id="Symbol" d="M34.0594 10.1875L29.8719 30.125C29.5594 31.5 28.6844 31.875 27.4969 31.1875L21.0594 26.4375L17.9969 29.4375C17.6219 29.8125 17.3719 30.0625 16.6844 30.0625L17.1219 23.5L29.0594 12.75C29.6219 12.3125 28.9344 12 28.2469 12.5L13.4969 21.75L7.18438 19.8125C5.80938 19.375 5.74688 18.4375 7.43438 17.75L32.3094 8.1875C33.4344 7.75 34.4344 8.4375 34.0594 10.1875Z" fill="rgb(45,165,225)" fill-rule="nonzero" />
+</svg>
