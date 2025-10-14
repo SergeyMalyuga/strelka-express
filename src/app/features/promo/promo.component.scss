@@ -6,7 +6,20 @@
 
 .promo__content {
   width: 1140px;
-  margin: 0 auto;
+  margin: 0 auto 30.50px;
+}
+
+.promo__content.light {
+  margin-bottom: 10px;
+}
+
+
+.promo__content_light {
+  background-color: rgba(255, 255, 255, 1);
+
+  img {
+    display: block;
+  }
 }
 
 .promo__list {
@@ -15,7 +28,7 @@
   margin: 0;
 
   li:nth-child(2) {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: variables.$light-text-color;
   }
 }
 
