@@ -129,7 +129,7 @@ ul {
 .contacts__phone {
   display: flex;
   flex-direction: column;
-  gap: 3.5px;
+  gap: 5px;
 }
 
 .contacts__phone-number {
@@ -155,7 +155,8 @@ ul {
   gap: 6.7px;
   position: relative;
   text-decoration: none;
-  color: rgb(38 175 0 / 100%);
+  //color: rgb(38 175 0 / 100%); TODO
+  color: rgb(26, 59, 16);
   font-family: variables.$main-font-family;
   font-size: 13px;
   font-weight: 400;
@@ -403,7 +404,7 @@ input[type='checkbox'] {
   border: none;
   box-sizing: border-box;
   padding: 14px 35px;
-  color: variables.$light-text-color;
+  //color: variables.$light-text-color;
   font-size: 17px;
   font-weight: 400;
   line-height: 24.29px;
