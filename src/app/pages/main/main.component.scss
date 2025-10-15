@@ -1,0 +1,20 @@
+.order-form__input {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.order-form__services-label::before {
+  transition: border-color 0.3s ease;
+}
+
+.order-form__services-label:hover::before {
+  border-color: rgba(230, 105, 30, 0.95);
+}
+
+.order-form__services-label.selected::before {
+  background-color: rgba(230, 105, 30, 0.95);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' version='1.1'%3E%3Cg%3E%3Crect fill='none' x='0' y='0' width='18' height='18'%3E%3C/rect%3E%3Cpolygon fill='%23FFFFFF' points='8 10 14 4 16 6 8 14 2 8 4 6'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+}

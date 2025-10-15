@@ -62,15 +62,21 @@
       <li class="main-header__nav-item">
         <a href="#fulfillment" class="main-header__nav-link">Фулфилмент</a>
       </li>
-      <li class="main-header__nav-item"><a href="#tariffs" class="main-header__nav-link">Тарифы</a></li>
+      <li class="main-header__nav-item">
+        <a href="#tariffs" class="main-header__nav-link">Тарифы</a>
+      </li>
       <li class="main-header__nav-item">
         <a href="#delivery-order" class="main-header__nav-link">Как заказать</a>
       </li>
-      <li class="main-header__nav-item"><a href="#reviews" class="main-header__nav-link">Отзывы</a></li>
+      <li class="main-header__nav-item">
+        <a href="#reviews" class="main-header__nav-link">Отзывы</a>
+      </li>
       <li class="main-header__nav-item">
         <a href="#questions" class="main-header__nav-link">Вопросы и ответы</a>
       </li>
-      <li class="main-header__nav-item"><a href="#contacts-details" class="main-header__nav-link">Контакты</a></li>
+      <li class="main-header__nav-item">
+        <a href="#contacts-details" class="main-header__nav-link">Контакты</a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -93,22 +99,37 @@
         </fieldset>
         <fieldset class="order-form__services order-form__fieldset">
           <legend class="order-form__services-title">Интересующая услуга</legend>
-          <label class="order-form__services-label"
+          <label appSelectServiceLabel class="order-form__services-label"
             ><input
+              appSelectService
+              (serviceSelected)="onServicesSelected($event)"
               type="checkbox"
               name="service[]"
               value="Доставка по Нижнему Новгороду"
             />Доставка по Нижнему Новгороду</label
           >
-          <label class="order-form__services-label"
-            ><input type="checkbox" name="service[]" value="Доставка междугородняя" />Доставка
-            междугородняя</label
-          >
-          <label class="order-form__services-label"
-            ><input type="checkbox" name="service[]" value="Фулфилмент" />Фулфилмент</label
-          >
-          <label class="order-form__services-label"
+          <label appSelectServiceLabel class="order-form__services-label"
             ><input
+              appSelectService
+              (serviceSelected)="onServicesSelected($event)"
+              type="checkbox"
+              name="service[]"
+              value="Доставка междугородняя"
+            />Доставка междугородняя</label
+          >
+          <label appSelectServiceLabel class="order-form__services-label"
+            ><input
+              appSelectService
+              type="checkbox"
+              (serviceSelected)="onServicesSelected($event)"
+              name="service[]"
+              value="Фулфилмент"
+            />Фулфилмент</label
+          >
+          <label appSelectServiceLabel class="order-form__services-label"
+            ><input
+              appSelectService
+              (serviceSelected)="onServicesSelected($event)"
               type="checkbox"
               name="service[]"
               value="Доставка на склады маркетплейсов"
@@ -138,13 +159,21 @@
         <div class="order__social-contacts">
           <div class="order__social-whatsapp">
             <p class="order__social-title">Связаться в <strong>WhatsApp</strong></p>
-            <a class="order__social-link"
+            <a
+              class="order__social-link"
+              href="https://api.whatsapp.com/send/?phone=79200111646&text&type=phone_number&app_absent=0"
+              aria-label="Связаться в WhatsApp Альберт Ахунов"
+              target="_blank"
               ><img src="./images/whatsapp-2.svg" alt="WhatsApp" width="48.47" height="47.98"
             /></a>
           </div>
           <div class="order__social-telegram">
             <p class="order__social-title">Связаться в <strong>Telegram</strong></p>
-            <a class="order__social-link"
+            <a
+              class="order__social-link"
+              href="https://t.me/AlbertAkhunov"
+              aria-label="Связаться в Telegram Альберт Ахунов"
+              target="_blank"
               ><img src="./images/telegram-2.svg" alt="Telegram" width="76.8" height="47.98"
             /></a>
           </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { DeliveryServicesComponent } from '../../features/delivery-services/delivery-services.component';
 import { NewsComponent } from '../../features/news/news.component';
 import { FulfillmentComponent } from '../../features/fulfillment/fulfillment.component';
@@ -10,10 +10,13 @@ import { ReviewsComponent } from '../../features/reviews/reviews.component';
 import { QuestionsComponent } from '../../features/questions/questions.component';
 import { ContactsComponent } from '../../features/contacts/contacts.component';
 import { FooterComponent } from '../../features/footer/footer.component';
+import { AppSelectService } from './directives/select-service-input.directive';
+import { AppSelectServiceLabel } from './directives/select-service-label.directive';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
+  styleUrl: './main.component.scss',
   imports: [
     DeliveryServicesComponent,
     NewsComponent,
@@ -26,6 +29,23 @@ import { FooterComponent } from '../../features/footer/footer.component';
     QuestionsComponent,
     ContactsComponent,
     FooterComponent,
+    AppSelectService,
+    AppSelectServiceLabel,
   ],
 })
-export class MainComponent {}
+export class MainComponent {
+  private selectedServices: WritableSignal<Set<string>> = signal<Set<string>>(new Set());
+
+  onServicesSelected(service: string): void {
+    this.selectedServices.update((services) => {
+      const newServices = new Set(services);
+      if (newServices.has(service)) {
+        newServices.delete(service);
+      } else {
+        newServices.add(service);
+      }
+      return newServices;
+    });
+    console.log(this.selectedServices());
+  }
+}
