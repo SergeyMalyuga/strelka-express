@@ -1,0 +1,28 @@
+@use '../../../styles/variables';
+
+.main-footer {
+  background-color: variables.$light-background-color;
+}
+
+.main-footer__content {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18.3px 0;
+}
+
+.main-footer__copyright {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.57px;
+  letter-spacing: 0;
+  text-align: center;
+
+  a {
+    display: block;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+  }
+}

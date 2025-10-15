@@ -9,6 +9,7 @@ import { PromoComponent } from '../../features/promo/promo.component';
 import { ReviewsComponent } from '../../features/reviews/reviews.component';
 import { QuestionsComponent } from '../../features/questions/questions.component';
 import { ContactsComponent } from '../../features/contacts/contacts.component';
+import { FooterComponent } from '../../features/footer/footer.component';
 
 @Component({
   selector: 'app-main',
@@ -24,6 +25,7 @@ import { ContactsComponent } from '../../features/contacts/contacts.component';
     ReviewsComponent,
     QuestionsComponent,
     ContactsComponent,
+    FooterComponent,
   ],
 })
 export class MainComponent {}
