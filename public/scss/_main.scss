@@ -22,17 +22,6 @@ em {
   font-style: normal;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  border: 0;
-}
-
 ul {
   padding: 0;
 }
@@ -462,4 +451,9 @@ input[type='checkbox'] {
 
 .advantage__item {
   text-align: center;
+}
+
+.background {
+  object-fit: cover;
+  display: block;
 }
