@@ -1,3 +1,5 @@
+@use '../../../styles/variables';
+
 .order-form__input {
   transition: transform 0.3s ease;
 
@@ -7,9 +9,8 @@
 }
 
 .order-form__services-label::before {
-  transition:
-    border-color 0.3s ease,
-    background-color 0.3s ease;
+  transition: border-color 0.3s ease,
+  background-color 0.3s ease;
 }
 
 .order-form__services-label:hover::before {
@@ -19,4 +20,33 @@
 .order-form__services-label.selected::before {
   background-color: rgba(230, 105, 30, 0.95);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' version='1.1'%3E%3Cg%3E%3Crect fill='none' x='0' y='0' width='18' height='18'%3E%3C/rect%3E%3Cpolygon fill='%23FFFFFF' points='8 10 14 4 16 6 8 14 2 8 4 6'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+}
+
+.link-scroll-up {
+  position: fixed;
+  width: 91px;
+  padding: 12px 0;
+  background-color: variables.$main-text-color;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 15px;
+  color: variables.$light-text-color;
+  top: 1250px;
+  right: 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.link-scroll-up.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.link-scroll-up:hover {
+  background-color: rgb(92 46 138);
+  transform: scale(1.1);
 }

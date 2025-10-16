@@ -12,6 +12,7 @@ import { ContactsComponent } from '../../features/contacts/contacts.component';
 import { FooterComponent } from '../../features/footer/footer.component';
 import { AppSelectService } from './directives/select-service-input.directive';
 import { AppSelectServiceLabel } from './directives/select-service-label.directive';
+import { ScrollUpDirective } from './directives/scroll-up.directive';
 
 @Component({
   selector: 'app-main',
@@ -31,6 +32,7 @@ import { AppSelectServiceLabel } from './directives/select-service-label.directi
     FooterComponent,
     AppSelectService,
     AppSelectServiceLabel,
+    ScrollUpDirective,
   ],
 })
 export class MainComponent {
