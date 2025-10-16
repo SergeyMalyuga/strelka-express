@@ -13,8 +13,8 @@ import { FooterComponent } from '../../features/footer/footer.component';
 import { AppSelectService } from './directives/select-service-input.directive';
 import { AppSelectServiceLabel } from './directives/select-service-label.directive';
 import { ScrollUpDirective } from './directives/scroll-up.directive';
-import { TransformTranslateFormDirective } from './directives/transform-translate-form.directive';
-import { TransformTranslateTextDirective } from './directives/transform-translate-text.directive';
+import { RouterLink } from '@angular/router';
+import { AppRoute } from '../../core/consts';
 
 @Component({
   selector: 'app-main',
@@ -35,11 +35,11 @@ import { TransformTranslateTextDirective } from './directives/transform-translat
     AppSelectService,
     AppSelectServiceLabel,
     ScrollUpDirective,
-    TransformTranslateFormDirective,
-    TransformTranslateTextDirective,
+    RouterLink,
   ],
 })
 export class MainComponent {
+  public readonly AppRoute = AppRoute;
   private selectedServices: WritableSignal<Set<string>> = signal<Set<string>>(new Set());
 
   onServicesSelected(service: string): void {
@@ -52,6 +52,5 @@ export class MainComponent {
       }
       return newServices;
     });
-    console.log(this.selectedServices());
   }
 }

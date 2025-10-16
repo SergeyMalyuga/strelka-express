@@ -74,8 +74,11 @@
       </fieldset>
     </form>
     <footer class="order-now__footer">
-      <label for="policy">Даю согласие на <a href="">обработку персональных данных</a></label>
-      <input id="policy" type="checkbox" />
+      <label appSelectServiceLabel class="policy-label" for="policy"
+        >Даю согласие на
+        <a [routerLink]="[AppRoute.POLICY]" target="_blank">обработку персональных данных</a
+        ><input id="policy" value="yes" type="checkbox"
+      /></label>
     </footer>
   </div>
 </section>

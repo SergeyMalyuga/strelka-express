@@ -141,7 +141,8 @@
           <p>Нажимая кнопку, вы даете согласие на</p>
           <a
             class="policy__link"
-            href="#"
+            [routerLink]="[AppRoute.POLICY]"
+            target="_blank"
             aria-label="Политика в отношении обработки персональных данных"
             >обработку персональных данных</a
           >
@@ -149,10 +150,8 @@
       </form>
       <div class="order__container">
         <div class="order__description">
-          <h2 appTransFormTranslateText class="order__description_top">
-            Доставка грузов. Быстро и безопасно!
-          </h2>
-          <div appTransFormTranslateText class="order__description-text">
+          <h2 class="order__description_top">Доставка грузов. Быстро и безопасно!</h2>
+          <div class="order__description-text">
             <p>
               Доставим <strong>любой</strong> груз по <strong>Нижнему Новгороду</strong> и не
               <em>только</em>!
