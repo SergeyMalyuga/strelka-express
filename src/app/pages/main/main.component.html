@@ -83,7 +83,7 @@
 <main>
   <section class="order">
     <div class="order__content">
-      <form class="order-form">
+      <form appTransformTranslateForm class="order-form">
         <fieldset class="order-form__contact-information order-form__fieldset">
           <legend class="order-form__contact-title">Заказать доставку</legend>
           <label for="name" class="order-form__label-name">Имя</label>
@@ -149,12 +149,16 @@
       </form>
       <div class="order__container">
         <div class="order__description">
-          <h2>Доставка грузов. Быстро и безопасно!</h2>
-          <p>
-            Доставим <strong>любой</strong> груз по <strong>Нижнему Новгороду</strong> и не
-            <em>только</em>!
-          </p>
-          <p>Работаем с <strong>2012</strong> года.</p>
+          <h2 appTransFormTranslateText class="order__description_top">
+            Доставка грузов. Быстро и безопасно!
+          </h2>
+          <div appTransFormTranslateText class="order__description-text">
+            <p>
+              Доставим <strong>любой</strong> груз по <strong>Нижнему Новгороду</strong> и не
+              <em>только</em>!
+            </p>
+            <p class="order__description_bottom">Работаем с <strong>2012</strong> года.</p>
+          </div>
         </div>
         <div class="order__social-contacts">
           <div class="order__social-whatsapp">

@@ -13,6 +13,8 @@ import { FooterComponent } from '../../features/footer/footer.component';
 import { AppSelectService } from './directives/select-service-input.directive';
 import { AppSelectServiceLabel } from './directives/select-service-label.directive';
 import { ScrollUpDirective } from './directives/scroll-up.directive';
+import { TransformTranslateFormDirective } from './directives/transform-translate-form.directive';
+import { TransformTranslateTextDirective } from './directives/transform-translate-text.directive';
 
 @Component({
   selector: 'app-main',
@@ -33,6 +35,8 @@ import { ScrollUpDirective } from './directives/scroll-up.directive';
     AppSelectService,
     AppSelectServiceLabel,
     ScrollUpDirective,
+    TransformTranslateFormDirective,
+    TransformTranslateTextDirective,
   ],
 })
 export class MainComponent {

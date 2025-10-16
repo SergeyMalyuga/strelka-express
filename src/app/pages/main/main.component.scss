@@ -9,8 +9,9 @@
 }
 
 .order-form__services-label::before {
-  transition: border-color 0.3s ease,
-  background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .order-form__services-label:hover::before {
@@ -37,8 +38,9 @@
   right: 50px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .link-scroll-up.visible {
@@ -49,4 +51,43 @@
 .link-scroll-up:hover {
   background-color: rgb(92 46 138);
   transform: scale(1.1);
+}
+
+.order-form {
+  transition:
+    transform 0.4s ease,
+    opacity 1s ease;
+  transform: translateX(-1200px);
+  opacity: 0;
+}
+
+.order-form.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.order__description_top {
+  transition:
+    transform 0.3s ease,
+    opacity 1s ease;
+  transform: translateY(-1200px);
+  opacity: 0;
+}
+
+.order__description_top.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.order__description-text {
+  transition:
+    transform 0.3s ease,
+    opacity 1s ease;
+  transform: translateY(1200px);
+  opacity: 0;
+}
+
+.order__description-text.show {
+  transform: translateY(0);
+  opacity: 1;
 }
