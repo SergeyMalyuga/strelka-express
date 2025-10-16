@@ -5,13 +5,21 @@ import { BodyManagerService } from '../../../core/services/body-manager.service'
   selector: '[appDialogClose]',
 })
 export class DialogCloseDirective {
-  @Output() keyDowned  = new EventEmitter<void>();
+  @Output() dialogClosed  = new EventEmitter<void>();
   private bodyManagerService: BodyManagerService = inject(BodyManagerService);
 
   @HostListener('keydown', ['$event'])
   onKeyDown(event: KeyboardEvent): void {
     if (event.key === 'Escape') {
-      this.keyDowned.emit();
+      this.dialogClosed.emit();
+    }
+  }
+
+  @HostListener('click', ['$event'])
+  onClick(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('dialog__close') || target.tagName === 'SPAN') {
+      this.dialogClosed.emit();
     }
   }
 }

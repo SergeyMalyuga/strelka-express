@@ -82,46 +82,120 @@
 }
 
 dialog {
+  position: relative;
   padding: 0;
+  margin-top: 50px;
   position: fixed;
   width: 320px;
-  top: 50px;
-  left: 50px;
   border-radius: 10px;
+  color: #333;
+  border-width: 1px;
+  font-size: 14px;
+  line-height: 1.2;
+  background-color:  rgb(245, 245, 245);
+  overflow: visible;
 
   input {
     width: 220px;
-    padding: 9.63px 15px;
+    padding: 12px 9.6px;
+    color: rgb(0 0 0 / 50%);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
   }
 
   h2.dialog__title {
     color: white;
     background-color: variables.$main-text-color;
-    padding: 15px 0;
+    padding: 20px 0;
     width: 100%;
-    margin: 0;
+    margin: 0 0 15px;
     font-size: 28px;
     line-height: 1.1;
+    font-weight: bold;
+    letter-spacing: 0.8px;
   }
+
+
+  label {
+    align-self: flex-start;
+    font-size: 14px;
+  }
+
+  textarea {
+    width: 220px;
+    padding: 12px 9.6px;
+    color: rgb(0 0 0 / 50%);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
 }
 
 dialog::backdrop {
   background-color: rgb(51 51 51 / 50%);
 }
 
-label {
-  align-self: flex-start;
-}
-
-textarea {
-  width: 220px;
-}
-
 .questions__form {
   padding: 15px 47px;
+
+}
+
+.questions__form-wrapper {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.questions__form-button {
+  display: block;
+  width: 150px;
+  padding: 15.56px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(230, 105, 30, 1);
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24.29px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.dialog__close {
+  position: absolute;
+  content: '';
+  width: 30px;
+  right: -15px;
+  top: -15px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: white;
+  transition: transform 0.2s ease;
+}
+
+.dialog__close:hover {
+  transform: scale(1.1);
+}
+
+.line_left, .line_right {
+  background-color: black;
+  display: block;
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.line_left {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.line_right {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 

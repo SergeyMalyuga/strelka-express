@@ -33,16 +33,22 @@
   <button appOpenDialogQuestions (dialogOpened)="onDialogOpened()" class="questions__button button-orange_hover-scale"
           type="button">Задать вопрос
   </button>
-  <dialog appDialogShow appDialogClose (keyDowned)="onKeyDowned()" [isOpen]="isDialogOpened()">
+  <dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isDialogOpened()">
     <h2 class="dialog__title">Задать вопрос</h2>
+    <button appDialogClose class="dialog__close">
+      <span class="line_left"></span>
+      <span class="line_right"></span>
+    </button>
     <form class="questions__form">
-      <label for="name">Имя</label>
-      <input id="name" type="text">
-      <label for="phone">Номер телефона <sup>*</sup></label>
-      <input id="phone" type="tel">
-      <label for="question">Ваш вопрос <sup>*</sup></label>
-      <textarea id="question" placeholder="Введите ваш вопрос"></textarea>
-
+      <div class="questions__form-wrapper">
+        <label for="name">Имя</label>
+        <input id="name" type="text">
+        <label for="phone">Номер телефона <sup>*</sup></label>
+        <input id="phone" type="tel">
+        <label for="question">Ваш вопрос <sup>*</sup></label>
+        <textarea rows="2" id="question"></textarea>
+      </div>
+      <button class="button-orange_hover-scale questions__form-button" type="submit">Отправить</button>
     </form>
   </dialog>
 </section>
