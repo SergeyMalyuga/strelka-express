@@ -1,0 +1,45 @@
+@use '../../../styles/variables';
+
+.policy {
+  width: 1140px;
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  line-height: 25.6px;
+  margin: 0 auto;
+}
+
+.policy__content {
+  width: 790px;
+  padding: 70px 5px;
+
+  h1 {
+    color: rgb(102, 51, 153);
+    font-size: 48px;
+    margin: 0 0 60px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28.8px;
+    margin: 40px 0 20px;
+  }
+
+  p {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 25.6px;
+    margin: 10px 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+    color: rgb(230, 25, 25);
+    font-size: 16px;
+    line-height: 25.6px;
+    margin: 10px 0;
+  }
+}
