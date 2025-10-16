@@ -72,7 +72,6 @@
   border-radius: 5px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   background: rgba(230, 105, 30, 1);
-  //color: rgba(255, 255, 255, 1); TODO
   font-size: 17px;
   line-height: 24.29px;
   letter-spacing: 0;
@@ -81,3 +80,48 @@
   border: none;
   display: block;
 }
+
+dialog {
+  padding: 0;
+  position: fixed;
+  width: 320px;
+  top: 50px;
+  left: 50px;
+  border-radius: 10px;
+
+  input {
+    width: 220px;
+    padding: 9.63px 15px;
+  }
+
+  h2.dialog__title {
+    color: white;
+    background-color: variables.$main-text-color;
+    padding: 15px 0;
+    width: 100%;
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.1;
+  }
+}
+
+dialog::backdrop {
+  background-color: rgb(51 51 51 / 50%);
+}
+
+label {
+  align-self: flex-start;
+}
+
+textarea {
+  width: 220px;
+}
+
+.questions__form {
+  padding: 15px 47px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
