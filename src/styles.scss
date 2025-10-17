@@ -30,11 +30,12 @@ button {
   transform: scale(1.05);
 }
 
-.link_hover-scale {
+.button_hover-scale {
   transition: transform 0.3s ease;
 }
 
-a.link_hover-scale:hover {
+.tariffs__item-buttona.button_hover-scale:hover,
+.button_hover-scale:hover {
   transform: scale(1.1);
   background: rgb(102 51 153 / 70%);
 }
@@ -73,7 +74,8 @@ button.button-orange_hover-scale:hover {
   transform: scale(1.1);
 }
 
-.line_left, .line_right {
+.line_left,
+.line_right {
   background-color: black;
   display: block;
   width: 16px;
@@ -107,4 +109,75 @@ dialog::backdrop {
   letter-spacing: 0;
   text-align: center;
   margin: 0 auto 15px;
+}
+
+.dialog__policy {
+  width: 250px;
+  margin: 0 auto;
+
+  p,
+  a {
+    color: rgb(51, 51, 51);
+    line-height: 18.2px;
+    font-size: 12.8px;
+    opacity: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-underline-offset: 1px;
+    text-underline-position: under;
+  }
+}
+
+dialog {
+  padding: 0;
+  margin-top: 50px;
+  position: fixed;
+  width: 320px;
+  border-radius: 10px;
+  color: #333;
+  border-width: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  background-color: rgb(245, 245, 245);
+  overflow: visible;
+
+  input {
+    width: 220px;
+    padding: 12px 9.6px;
+    color: rgb(0 0 0 / 50%);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
+  h3.dialog__title {
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0 0 15px;
+    font-size: 28px;
+    line-height: 1.1;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  label {
+    align-self: flex-start;
+    font-size: 14px;
+  }
+
+  textarea {
+    width: 220px;
+    padding: 12px 9.6px;
+    color: rgb(0 0 0 / 50%);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
 }

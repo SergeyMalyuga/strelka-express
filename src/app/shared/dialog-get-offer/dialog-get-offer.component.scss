@@ -23,7 +23,6 @@
     font-weight: bold;
     letter-spacing: 0.7px;
     margin: 5px 0;
-
   }
 
   p {
@@ -38,7 +37,9 @@
 .dialog-offer__form {
   padding: 25px 15px 43.81px;
 
-  label, input, textarea {
+  label,
+  input,
+  textarea {
     width: 250px;
   }
 
@@ -83,7 +84,7 @@ textarea {
 }
 
 .file-label::after {
-  content: "Выберите файл..";
+  content: 'Выберите файл..';
   background-color: variables.$light-text-color;
   padding: 12px 9.6px;
   color: rgb(0 0 0 / 50%);
@@ -96,11 +97,12 @@ textarea {
   width: 180px;
 }
 
-.dialog-offer__policy {
+.dialog__policy {
   width: 250px;
   margin: 0 auto;
 
-  p, a {
+  p,
+  a {
     color: rgb(51, 51, 51);
     line-height: 18.2px;
     font-size: 12.8px;
@@ -110,6 +112,4 @@ textarea {
   p {
     margin: 0;
   }
-
-
 }

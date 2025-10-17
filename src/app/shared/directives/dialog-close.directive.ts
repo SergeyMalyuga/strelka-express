@@ -5,7 +5,7 @@ import { BodyManagerService } from '../../core/services/body-manager.service';
   selector: '[appDialogClose]',
 })
 export class DialogCloseDirective {
-  @Output() dialogClosed  = new EventEmitter<void>();
+  @Output() dialogClosed = new EventEmitter<void>();
   private bodyManagerService: BodyManagerService = inject(BodyManagerService);
 
   @HostListener('keydown', ['$event'])

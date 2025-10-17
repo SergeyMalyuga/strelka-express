@@ -1,4 +1,11 @@
-<dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isDialogOpened()" class="dialog-offer" open>
+<dialog
+  appDialogShow
+  appDialogClose
+  (dialogClosed)="onKeyDowned()"
+  [isOpen]="isDialogOpened()"
+  class="dialog-offer"
+  open
+>
   <div class="dialog-offer__title-wrapper">
     <h3>Получить предложение.</h3>
     <p>Оставьте контакты, мы свяжемся с вами!</p>
@@ -10,23 +17,37 @@
   <form class="dialog-offer__form form">
     <div class="dialog-offer__form-wrapper">
       <label for="name">Имя</label>
-      <input id="name" type="text">
+      <input id="name" type="text" />
       <label for="phone">Номер телефона <sup>*</sup></label>
-      <input id="phone" type="tel">
+      <input id="phone" type="tel" />
       <label for="reviews">Ваш комментарий <sup>*</sup></label>
       <textarea rows="2" id="reviews"></textarea>
       <label for="file" class="file-label">Файл</label>
-      <input id="file" class="form__file" type="file" il-action="listen" name="ImageUploadForm[image]">
+      <input
+        id="file"
+        class="form__file"
+        type="file"
+        il-action="listen"
+        name="ImageUploadForm[image]"
+      />
     </div>
-    <button class="button-orange_hover-scale dialog-offer__form-button dialog__button" type="submit">Отправить</button>
-    <div class="dialog-offer__policy">
-      <p>Нажимая кнопку, вы даете согласие на<a
-        class="dialog-offer__policy-link"
-        [routerLink]="[AppRoute.POLICY]"
-        target="_blank"
-        aria-label="Политика в отношении обработки персональных данных"
-      >обработку персональных данных</a
-      ></p>
+    <button
+      class="button-orange_hover-scale dialog-offer__form-button dialog__button"
+      type="submit"
+    >
+      Отправить
+    </button>
+    <div class="dialog__policy">
+      <p>
+        Нажимая кнопку, вы даете согласие на<a
+          class="dialog-offer__policy-link"
+          [routerLink]="[AppRoute.POLICY]"
+          target="_blank"
+          aria-label="Политика в отношении обработки персональных данных"
+        >
+          обработку персональных данных</a
+        >
+      </p>
     </div>
   </form>
 </dialog>

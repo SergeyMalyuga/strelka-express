@@ -81,62 +81,13 @@
   display: block;
 }
 
-dialog {
-  position: relative;
-  padding: 0;
-  margin-top: 50px;
-  position: fixed;
-  width: 320px;
-  border-radius: 10px;
-  color: #333;
-  border-width: 0;
-  font-size: 14px;
-  line-height: 1.2;
-  background-color:  rgb(245, 245, 245);
-  overflow: visible;
-
-  input {
-    width: 220px;
-    padding: 12px 9.6px;
-    color: rgb(0 0 0 / 50%);
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-  }
-
-  h3.dialog__title {
-    color: white;
-    background-color: variables.$main-text-color;
-    padding: 20px 0;
-    width: 100%;
-    margin: 0 0 15px;
-    font-size: 28px;
-    line-height: 1.1;
-    font-weight: bold;
-    letter-spacing: 0.8px;
-    text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-
-  label {
-    align-self: flex-start;
-    font-size: 14px;
-  }
-
-  textarea {
-    width: 220px;
-    padding: 12px 9.6px;
-    color: rgb(0 0 0 / 50%);
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-  }
-
+h3.dialog__title {
+  color: white;
+  background-color: variables.$main-text-color;
 }
 
 .questions__form {
   padding: 15px 47px;
-
 }
 
 .questions__form-wrapper {
@@ -151,6 +102,3 @@ dialog {
   display: block;
   width: 150px;
 }
-
-
-

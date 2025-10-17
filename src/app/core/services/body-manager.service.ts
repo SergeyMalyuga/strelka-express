@@ -1,10 +1,8 @@
 import { Injectable, RendererFactory2 } from '@angular/core';
 
-@Injectable(
-  {
-    providedIn: 'root'
-  }
-)
+@Injectable({
+  providedIn: 'root',
+})
 export class BodyManagerService {
   private render;
   private body = document.body;

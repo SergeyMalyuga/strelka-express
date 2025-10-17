@@ -11,7 +11,12 @@
               Работаем на взаимовыгодных условиях. Готовы к диалогу и долгосрочному сотрудничеству в
               сфере логистических услуг (b2b, b2c, фулфилмент).
             </p>
-            <button appOpenDialogQuestions (dialogOpened)="onDialogOpened()" class="button-orange_hover-scale" type="button">
+            <button
+              appOpenDialogQuestions
+              (dialogOpened)="onDialogOpened()"
+              class="button-orange_hover-scale"
+              type="button"
+            >
               Получить предложение для бизнеса
             </button>
           </div>
@@ -30,7 +35,12 @@
             <div class="promo__card-column">
               <h3>Фотоотчет по доставке.</h3>
               <p>Предоставим фотоотчет по запросу.</p>
-              <button appOpenDialogQuestions (dialogOpened)="onDialogOpened()" class="button-orange_hover-scale" type="button">
+              <button
+                appOpenDialogQuestions
+                (dialogOpened)="onDialogOpened()"
+                class="button-orange_hover-scale"
+                type="button"
+              >
                 Заказать доставку с фотоотчетом
               </button>
             </div>
@@ -41,5 +51,8 @@
     </div>
   </div>
 
-  <app-dialog-offer [isDialogOpened]="isDialogOpened" (dialogClosed)="onKeyDowned()"></app-dialog-offer>
+  <app-dialog-offer
+    [isDialogOpened]="isDialogOpened"
+    (dialogClosed)="onKeyDowned()"
+  ></app-dialog-offer>
 </section>

@@ -10,7 +10,13 @@
           <span class="conditions__amount">от 400 ₽ / </span
           ><span class="conditions__dimensions">до 20 кг до 0.2м³</span>
         </p>
-        <a class="tariffs__item-link link_hover-scale" href="#">Выбрать</a>
+        <button
+          appOpenDialogQuestions
+          (dialogOpened)="onDialogOpened()"
+          class="tariffs__item-button button_hover-scale"
+        >
+          Выбрать
+        </button>
       </li>
       <li class="tariffs__item list__item_hover-scale">
         <p class="tariffs__item-description">
@@ -20,7 +26,13 @@
           <span class="conditions__amount">от 1000 ₽ / </span
           ><span class="conditions__dimensions">от 0.5м³</span>
         </p>
-        <a class="tariffs__item-link link_hover-scale" href="#">Выбрать</a>
+        <button
+          appOpenDialogQuestions
+          (dialogOpened)="onDialogOpened()"
+          class="tariffs__item-button button_hover-scale"
+        >
+          Выбрать
+        </button>
       </li>
       <li class="tariffs__item list__item_hover-scale">
         <p class="tariffs__item-description">Доставка по Нижегородской области</p>
@@ -28,7 +40,13 @@
           <span class="conditions__amount">от 800 ₽ / </span
           ><span class="conditions__dimensions">до 20 кг до 0.2м³</span>
         </p>
-        <a class="tariffs__item-link link_hover-scale" href="#">Выбрать</a>
+        <button
+          appOpenDialogQuestions
+          (dialogOpened)="onDialogOpened()"
+          class="tariffs__item-button button_hover-scale"
+        >
+          Выбрать
+        </button>
       </li>
       <li class="tariffs__item list__item_hover-scale">
         <p class="tariffs__item-description">Доставка по России</p>
@@ -36,7 +54,13 @@
           <span class="conditions__amount">от 500 ₽ / </span
           ><span class="conditions__dimensions">до 20 кг до 0.2м³</span>
         </p>
-        <a class="tariffs__item-link link_hover-scale" href="#">Выбрать</a>
+        <button
+          appOpenDialogQuestions
+          (dialogOpened)="onDialogOpened()"
+          class="tariffs__item-button button_hover-scale"
+        >
+          Выбрать
+        </button>
       </li>
       <li class="tariffs__item list__item_hover-scale">
         <p class="tariffs__item-description">
@@ -47,8 +71,50 @@
           <span class="conditions__amount">от 8 ₽ / </span
           ><span class="conditions__dimensions">единица³</span>
         </p>
-        <a class="tariffs__item-link link_hover-scale" href="#">Выбрать</a>
+        <button
+          appOpenDialogQuestions
+          (dialogOpened)="onDialogOpened()"
+          class="tariffs__item-button button_hover-scale"
+        >
+          Выбрать
+        </button>
       </li>
     </ul>
   </div>
+  <dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isDialogOpened()">
+    <div class="dialog-tariffs__title-wrapper">
+      <h3 class="dialog__title">Оставьте заявку</h3>
+      <p>Мы с свяжемся с вами!</p>
+      <button appDialogClose class="dialog__close">
+        <span class="line_left"></span>
+        <span class="line_right"></span>
+      </button>
+    </div>
+    <form class="questions__form">
+      <div class="questions__form-wrapper">
+        <label for="name">Имя</label>
+        <input id="name" type="text" />
+        <label for="phone">Номер телефона <sup>*</sup></label>
+        <input id="phone" type="tel" />
+      </div>
+      <button
+        class="button-orange_hover-scale questions__form-button dialog__button tariffs__button"
+        type="submit"
+      >
+        Отправить заявку
+      </button>
+    </form>
+    <div class="dialog__policy dialog-tariffs__policy">
+      <p>
+        Нажимая кнопку, вы даете согласие на<a
+          class="dialog-tariffs__policy-link"
+          [routerLink]="[AppRoute.POLICY]"
+          target="_blank"
+          aria-label="Политика в отношении обработки персональных данных"
+        >
+          обработку персональных данных</a
+        >
+      </p>
+    </div>
+  </dialog>
 </section>

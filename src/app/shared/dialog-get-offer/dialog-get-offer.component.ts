@@ -13,7 +13,7 @@ import { AppDialogShow } from '../directives/open-dialog.component';
 export class DialogOfferComponent {
   protected readonly AppRoute = AppRoute;
   @Output() dialogClosed = new EventEmitter<void>();
-  @Input({required: true}) isDialogOpened!: WritableSignal<boolean>;
+  @Input({ required: true }) isDialogOpened!: WritableSignal<boolean>;
 
   onKeyDowned() {
     this.dialogClosed.emit();

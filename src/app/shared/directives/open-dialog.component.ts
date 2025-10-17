@@ -24,7 +24,6 @@ export class AppDialogShow implements OnChanges, OnDestroy {
       element.close();
     }
     if (changes['isOpen']) {
-
       if (this.isOpen) {
         element.showModal();
         this.bodyManagerService.setBodyOverflow(true);
@@ -36,7 +35,7 @@ export class AppDialogShow implements OnChanges, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if(this.isOpen) {
+    if (this.isOpen) {
       this.bodyManagerService.setBodyOverflow(false);
     }
   }

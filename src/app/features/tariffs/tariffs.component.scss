@@ -47,8 +47,9 @@
   width: 567px;
 }
 
-.tariffs__item-link {
+.tariffs__item-button {
   text-decoration: none;
+  border: none;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 25%);
   background: rgb(102 51 153 / 90%);
@@ -76,4 +77,52 @@
   font-weight: 400;
   line-height: 33.28px;
   letter-spacing: 0;
+}
+
+.questions__form {
+  padding: 15px 47px;
+}
+
+.questions__form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.questions__form-button {
+  display: block;
+  width: 150px;
+}
+
+.dialog-tariffs__policy {
+  width: 250px;
+  margin-bottom: 35px;
+}
+
+.tariffs__button {
+  width: 190px;
+}
+
+.dialog-tariffs__title-wrapper {
+  background-color: variables.$main-text-color;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px;
+
+  h3 {
+    margin: 0;
+    padding: 5px 0 0;
+    line-height: 30.8px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 23.8px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+  }
 }
