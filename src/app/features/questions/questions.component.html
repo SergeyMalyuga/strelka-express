@@ -34,7 +34,7 @@
           type="button">Задать вопрос
   </button>
   <dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isDialogOpened()">
-    <h2 class="dialog__title">Задать вопрос</h2>
+    <h3 class="dialog__title">Задать вопрос</h3>
     <button appDialogClose class="dialog__close">
       <span class="line_left"></span>
       <span class="line_right"></span>
@@ -48,7 +48,7 @@
         <label for="question">Ваш вопрос <sup>*</sup></label>
         <textarea rows="2" id="question"></textarea>
       </div>
-      <button class="button-orange_hover-scale questions__form-button" type="submit">Отправить</button>
+      <button class="button-orange_hover-scale questions__form-button dialog__button" type="submit">Отправить</button>
     </form>
   </dialog>
 </section>

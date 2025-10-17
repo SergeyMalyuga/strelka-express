@@ -1,5 +1,5 @@
 import { Directive, EventEmitter, HostListener, inject, Output } from '@angular/core';
-import { BodyManagerService } from '../../../core/services/body-manager.service';
+import { BodyManagerService } from '../../core/services/body-manager.service';
 
 @Directive({
   selector: '[appDialogClose]',

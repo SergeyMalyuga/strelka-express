@@ -1,0 +1,115 @@
+@use '../../../styles/variables';
+
+.dialog-offer {
+  width: 340px;
+  padding: 0;
+  position: relative;
+  margin-top: 50px;
+  position: fixed;
+  border-radius: 10px;
+  color: #333;
+  border-width: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  background-color: rgb(245, 245, 245);
+  overflow: visible;
+
+  h3 {
+    color: white;
+    width: 100%;
+    margin: 0 0 15px;
+    font-size: 27px;
+    line-height: 29.7px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    margin: 5px 0;
+
+  }
+
+  p {
+    margin: 0 0 5px;
+    color: variables.$light-background-color;
+    opacity: 0.7;
+    line-height: 22.4px;
+    font-size: 16px;
+  }
+}
+
+.dialog-offer__form {
+  padding: 25px 15px 43.81px;
+
+  label, input, textarea {
+    width: 250px;
+  }
+
+  input {
+    padding: 12px 9.6px;
+    color: rgb(0 0 0 / 50%);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+}
+
+textarea {
+  padding: 12px 9.6px;
+  color: rgb(0 0 0 / 50%);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.dialog-offer__title-wrapper {
+  background-color: variables.$main-text-color;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dialog-offer__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.form__file {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-label::after {
+  content: "Выберите файл..";
+  background-color: variables.$light-text-color;
+  padding: 12px 9.6px;
+  color: rgb(0 0 0 / 50%);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.dialog-offer__form-button {
+  display: block;
+  width: 180px;
+}
+
+.dialog-offer__policy {
+  width: 250px;
+  margin: 0 auto;
+
+  p, a {
+    color: rgb(51, 51, 51);
+    line-height: 18.2px;
+    font-size: 12.8px;
+    opacity: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+
+}

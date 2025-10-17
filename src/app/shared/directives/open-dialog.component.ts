@@ -7,7 +7,7 @@ import {
   OnDestroy,
   SimpleChanges,
 } from '@angular/core';
-import { BodyManagerService } from '../../../core/services/body-manager.service';
+import { BodyManagerService } from '../../core/services/body-manager.service';
 
 @Directive({
   selector: '[appDialogShow]',
@@ -19,8 +19,12 @@ export class AppDialogShow implements OnChanges, OnDestroy {
   private bodyManagerService: BodyManagerService = inject(BodyManagerService);
 
   ngOnChanges(changes: SimpleChanges): void {
+    const element = this.elementRef.nativeElement as HTMLDialogElement;
+    if (this.isOpen ?? element.open) {
+      element.close();
+    }
     if (changes['isOpen']) {
-      const element = this.elementRef.nativeElement as HTMLDialogElement;
+
       if (this.isOpen) {
         element.showModal();
         this.bodyManagerService.setBodyOverflow(true);
