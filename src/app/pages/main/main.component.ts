@@ -18,6 +18,7 @@ import { AppRoute } from '../../core/consts';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DialogErrorComponent } from '../../shared/dialog-error/dialog-error.component';
 import { DialogErrorService } from '../../core/services/dialog-error.service';
+import { DialogOrderComponent } from '../../features/dialog-order/dialog-order.component';
 
 @Component({
   selector: 'app-main',
@@ -41,6 +42,7 @@ import { DialogErrorService } from '../../core/services/dialog-error.service';
     RouterLink,
     ReactiveFormsModule,
     DialogErrorComponent,
+    DialogOrderComponent,
   ],
 })
 export class MainComponent {

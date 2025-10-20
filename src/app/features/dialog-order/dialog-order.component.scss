@@ -1,0 +1,35 @@
+@use '../../../styles/variables';
+
+.dialog-order {
+  width: 1140px;
+
+  legend {
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: auto;
+  }
+
+  label {
+    display: flex;
+    gap: 5px;
+  }
+
+}
+
+.dialog-order__form {
+  display: flex;
+  gap: 60px;
+}
+
+
+.dialog-order__fieldset {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  border: none;
+  padding: 0;
+}
+
+
