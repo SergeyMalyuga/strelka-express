@@ -6,7 +6,6 @@ import { BodyManagerService } from '../../core/services/body-manager.service';
 })
 export class DialogCloseDirective {
   @Output() dialogClosed = new EventEmitter<void>();
-  private bodyManagerService: BodyManagerService = inject(BodyManagerService);
 
   @HostListener('keydown', ['$event'])
   onKeyDown(event: KeyboardEvent): void {
@@ -18,7 +17,13 @@ export class DialogCloseDirective {
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
-    if (target.classList.contains('dialog__close') || target.tagName === 'SPAN') {
+
+    if (
+      target.classList.contains('dialog__close') ||
+      target.classList.contains('dialog-error__button-close') ||
+      target.classList.contains('dialog-error__button') ||
+      target.tagName === 'SPAN'
+    ) {
       this.dialogClosed.emit();
     }
   }

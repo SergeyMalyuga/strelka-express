@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { DeliveryServicesComponent } from '../../features/delivery-services/delivery-services.component';
 import { NewsComponent } from '../../features/news/news.component';
 import { FulfillmentComponent } from '../../features/fulfillment/fulfillment.component';
@@ -15,6 +15,9 @@ import { AppSelectServiceLabel } from './directives/select-service-label.directi
 import { ScrollUpDirective } from './directives/scroll-up.directive';
 import { RouterLink } from '@angular/router';
 import { AppRoute } from '../../core/consts';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { DialogErrorComponent } from '../../shared/dialog-error/dialog-error.component';
+import { DialogErrorService } from '../../core/services/dialog-error.service';
 
 @Component({
   selector: 'app-main',
@@ -36,11 +39,21 @@ import { AppRoute } from '../../core/consts';
     AppSelectServiceLabel,
     ScrollUpDirective,
     RouterLink,
+    ReactiveFormsModule,
+    DialogErrorComponent,
   ],
 })
 export class MainComponent {
   public readonly AppRoute = AppRoute;
   private selectedServices: WritableSignal<Set<string>> = signal<Set<string>>(new Set());
+  private fb: FormBuilder = inject(FormBuilder);
+  private dialogErrorService: DialogErrorService = inject(DialogErrorService);
+  public orderGroup: FormGroup = this.fb.group({
+    name: ['', Validators.required],
+    phone: ['', Validators.required],
+  });
+  public errors: WritableSignal<string[]> = signal<string[]>([]);
+  public isErrorDialogOpened: WritableSignal<boolean> = signal<boolean>(false);
 
   onServicesSelected(service: string): void {
     this.selectedServices.update((services) => {
@@ -52,5 +65,19 @@ export class MainComponent {
       }
       return newServices;
     });
+  }
+
+  onSubmit() {
+    if (this.orderGroup.invalid) {
+      this.errors.set([]);
+      this.errors.set(this.dialogErrorService.getErrorsMessages(this.orderGroup));
+      this.isErrorDialogOpened.set(true);
+    } else {
+      console.log('Well Done!!!');
+    }
+  }
+
+  onDialogClosed() {
+    this.isErrorDialogOpened.set(false);
   }
 }

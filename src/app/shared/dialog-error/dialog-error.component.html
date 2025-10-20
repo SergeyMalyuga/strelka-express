@@ -1,0 +1,11 @@
+<dialog appDialogShow [isOpen]="isOpen" class="dialog-error">
+  <div class="dialog-error__content">
+    <h3>Неправильно заполнены поля:</h3>
+      <p>{{errors[FIRST_ERRORS_MESSAGE]}}</p>
+    <button type="button" appDialogClose (dialogClosed)="onKeyDowned()" class="dialog-error__button-close">
+      <span class="left"></span>
+      <span class="right"></span>
+    </button>
+    <button type="button" appDialogClose (dialogClosed)="onKeyDowned()" class="dialog-error__button">Ok</button>
+  </div>
+</dialog>

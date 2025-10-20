@@ -6,8 +6,11 @@ import { Directive, ElementRef, EventEmitter, HostListener, inject, Output } fro
 export class DialogTriggerDirective {
   @Output() dialogOpened = new EventEmitter<void>();
 
-  @HostListener('click')
-  onClick() {
-    this.dialogOpened.emit();
+  @HostListener('click', ['$event'])
+  onClick(evt: MouseEvent) {
+    const target = evt.target as HTMLElement;
+    if(target.tagName === 'BUTTON') {
+      this.dialogOpened.emit();
+    }
   }
 }
