@@ -15,7 +15,6 @@
   animation-timeline: auto;
   animation-range-start: normal;
 
-
   h3 {
     color: rgb(255, 255, 255);
     font-size: 27px;
@@ -33,8 +32,6 @@
     margin: 0 0 28px;
     color: rgb(255, 255, 255);
   }
-
-
 }
 
 .dialog-error__content {
@@ -44,7 +41,7 @@
   padding-top: 76px;
 
   .dialog-error__button-close {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     top: -48px;
@@ -54,11 +51,13 @@
     border-radius: 50%;
     background-color: white;
     margin: 0 auto;
-    transition: transform 0.3s ease, border 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      border 0.3s ease;
 
     &:hover {
       transform: scale(1.1);
-      border-color: #e36060;;
+      border-color: #e36060;
     }
 
     span.left {
@@ -71,7 +70,8 @@
       left: 16px;
     }
 
-    span.left, span.right {
+    span.left,
+    span.right {
       position: absolute;
       height: 5px;
       width: 47px;

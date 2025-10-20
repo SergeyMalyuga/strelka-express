@@ -9,7 +9,7 @@ export class DialogTriggerDirective {
   @HostListener('click', ['$event'])
   onClick(evt: MouseEvent) {
     const target = evt.target as HTMLElement;
-    if(target.tagName === 'BUTTON') {
+    if (target.tagName === 'BUTTON') {
       this.dialogOpened.emit();
     }
   }
