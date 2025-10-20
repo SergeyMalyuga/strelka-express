@@ -5,6 +5,16 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   overflow: visible;
   margin: auto;
+  animation-name: showSweetAlert;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-timeline: auto;
+  animation-range-start: normal;
+
 
   h3 {
     color: rgb(255, 255, 255);
@@ -87,5 +97,24 @@
 
   &:hover {
     transform: scale(1.03);
+  }
+}
+
+@keyframes showSweetAlert {
+  0% {
+    transform: scale(1);
+  }
+
+  1% {
+    transform: scale(0.5);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
   }
 }
