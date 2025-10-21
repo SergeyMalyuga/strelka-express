@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
 import { DialogTriggerDirective } from '../../shared/directives/dialog-trigger.directive';
 import { AppDialogShow } from '../../shared/directives/open-dialog.component';
-import { BodyManagerService } from '../../core/services/body-manager.service';
 import { DialogCloseDirective } from '../../shared/directives/dialog-close.directive';
 
 @Component({

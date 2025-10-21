@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, signal, WritableSignal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, WritableSignal } from '@angular/core';
 import { DialogCloseDirective } from '../directives/dialog-close.directive';
 import { AppRoute } from '../../core/consts';
 import { RouterLink } from '@angular/router';

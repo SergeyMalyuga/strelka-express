@@ -1,53 +1,53 @@
 <dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isOpen" class="dialog-order" open>
-  <form class="dialog-order__form">
+  <form [formGroup]="orderGroup" (ngSubmit)="onSubmit()" class="dialog-order__form">
     <div class="dialog-order__column">
       <fieldset class="city dialog-order__fieldset">
         <legend>Выберете город отправки</legend>
-        <label><input type="radio" name="city" value="Москва">Москва</label>
-        <label><input type="radio" name="city" value="Казань">Казань</label>
-        <label><input type="radio" name="city" value="Тула">Тула</label>
-        <label><input type="radio" name="city" value="Рязань">Рязань</label>
-        <label><input type="radio" name="city" value="Новосемейкино">Новосемейкино</label>
-        <label><input type="radio" name="city" value="Котовск">Котовск</label>
-        <label><input type="radio" name="city" value="Краснодар">Краснодар</label>
-        <label><input type="radio" name="city" value="Невонномысск">Невонномысск</label>
-        <label><input type="radio" name="city" value="Нижний Новгород">Нижний Новгород</label>
+        <label><input type="radio" name="city" value="Москва" formControlName="city">Москва</label>
+        <label><input type="radio" name="city" value="Казань" formControlName="city">Казань</label>
+        <label><input type="radio" name="city" value="Тула" formControlName="city">Тула</label>
+        <label><input type="radio" name="city" value="Рязань" formControlName="city">Рязань</label>
+        <label><input type="radio" name="city" value="Новосемейкино" formControlName="city">Новосемейкино</label>
+        <label><input type="radio" name="city" value="Котовск" formControlName="city">Котовск</label>
+        <label><input type="radio" name="city" value="Краснодар" formControlName="city">Краснодар</label>
+        <label><input type="radio" name="city" value="Невонномысск" formControlName="city">Невинномысск</label>
+        <label><input type="radio" name="city" value="Нижний Новгород" formControlName="city">Нижний Новгород</label>
       </fieldset>
       <fieldset class="warehouse dialog-order__fieldset">
         <legend>Выберете склад</legend>
-        <label><input type="radio" name="warehouse" value="Wildberries">Wildberries</label>
-        <label><input type="radio" name="warehouse" value="Ozon">Ozon</label>
-        <label><input type="radio" name="warehouse" value="ЯндексМаркет">ЯндексМаркет</label>
-        <label><input type="radio" name="warehouse" value="">Мегамаркет</label>
+        <label><input type="radio" name="warehouse" value="Wildberries" formControlName="warehouse">Wildberries</label>
+        <label><input type="radio" name="warehouse" value="Ozon" formControlName="warehouse">Ozon</label>
+        <label><input type="radio" name="warehouse" value="ЯндексМаркет" formControlName="warehouse">ЯндексМаркет</label>
+        <label><input type="radio" name="warehouse" value="МегаМаркет" formControlName="warehouse">МегаМаркет</label>
       </fieldset>
-      <input  id="deliveryDate" type="text">
+      <input id="deliveryDate" type="text" formControlName="date">
     </div>
-<hr>
+    <hr>
     <div class="dialog-order__column">
       <fieldset class="packaging dialog-order__fieldset">
         <legend>Вид упаковки</legend>
-        <label><input type="radio" name="packaging" value="Короба">Короба</label>
-        <label><input type="radio" name="packaging" value="Палеты">Паллеты</label>
+        <label><input type="radio" name="packaging" value="Короба" formControlName="packaging">Короба</label>
+        <label><input type="radio" name="packaging" value="Палеты" formControlName="packaging">Паллеты</label>
       </fieldset>
       <fieldset class="count dialog-order__fieldset">
         <label class="visually-hidden" for="count">Количество</label>
-        <input id="count" type="number" min="0" step="0.01" placeholder="Количество">
+        <input id="count" type="number" min="0" step="1" placeholder="Количество"  formControlName="count">
       </fieldset>
       <fieldset class="cargo-volume dialog-order__fieldset">
         <label class="visually-hidden" for="volume">Oбъём груза в кубических метрах</label>
-        <input id="volume" type="number" min="0" step="0.01" placeholder="Объём груза м³">
+        <input id="volume" type="number" min="0" step="0.01" placeholder="Объём груза м³" formControlName="volume">
       </fieldset>
       <fieldset class="cargo-pickup dialog-order__fieldset">
         <legend>Требуется ли забор груза?</legend>
-        <label><input type="radio" name="pickup" value="Да">Да</label>
-        <label><input type="radio" name="pickup" value="Нет">Нет</label>
+        <label><input type="radio" name="pickup" value="Yes" formControlName="pickup">Да</label>
+        <label><input type="radio" name="pickup" value="No" formControlName="pickup">Нет</label>
       </fieldset>
       <fieldset class="pickup-address dialog-order__fieldset">
         <label for="pickup-address">Укажите адрес забора груза</label>
-        <textarea id="pickup-address" name="address"></textarea>
+        <textarea id="pickup-address" name="address" formControlName="address"></textarea>
       </fieldset>
     </div>
-<button class="dialog-order__submit">Отправить заявку</button>
+    <button class="dialog-order__submit" type="submit">Отправить заявку</button>
   </form>
   <button appDialogClose class="dialog__close">
     <span class="line_left"></span>

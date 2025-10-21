@@ -8,9 +8,8 @@ describe('DialogOrderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DialogOrderComponent]
-    })
-    .compileComponents();
+      imports: [DialogOrderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DialogOrderComponent);
     component = fixture.componentInstance;

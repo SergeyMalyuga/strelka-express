@@ -3,6 +3,7 @@
 .dialog-order {
   width: 1140px;
   padding: 10px;
+  margin-top: 310px;
 
   legend {
     margin-bottom: 20px;
@@ -25,8 +26,6 @@
   }
 }
 
-
-
 .dialog-order__column {
   display: flex;
   justify-content: space-between;
@@ -37,7 +36,6 @@
   }
 }
 
-
 .dialog-order__fieldset {
   display: flex;
   gap: 10px;
@@ -45,7 +43,6 @@
   border: none;
   padding: 0;
 }
-
 
 .cargo-pickup, .packaging {
 
@@ -59,7 +56,7 @@
 }
 
 .count, .cargo-volume {
-width: 150px;
+  width: 150px;
 
   input {
     width: 150px;
@@ -79,8 +76,6 @@ width: 150px;
 .flatpickr-input {
   text-align: center;
 }
-
-
 
 hr {
   margin-bottom: 30px;

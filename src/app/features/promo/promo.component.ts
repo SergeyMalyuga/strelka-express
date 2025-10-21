@@ -1,10 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnDestroy,
-  signal,
-  WritableSignal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
 import { DialogOfferComponent } from '../../shared/dialog-get-offer/dialog-get-offer.component';
 import { DialogTriggerDirective } from '../../shared/directives/dialog-trigger.directive';
 
