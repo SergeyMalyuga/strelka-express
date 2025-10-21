@@ -19,6 +19,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { DialogErrorComponent } from '../../shared/dialog-error/dialog-error.component';
 import { DialogErrorService } from '../../core/services/dialog-error.service';
 import { DialogOrderComponent } from '../../features/dialog-order/dialog-order.component';
+import { DialogTriggerDirective } from '../../shared/directives/dialog-trigger.directive';
 
 @Component({
   selector: 'app-main',
@@ -43,6 +44,7 @@ import { DialogOrderComponent } from '../../features/dialog-order/dialog-order.c
     ReactiveFormsModule,
     DialogErrorComponent,
     DialogOrderComponent,
+    DialogTriggerDirective,
   ],
 })
 export class MainComponent {
@@ -56,6 +58,7 @@ export class MainComponent {
   });
   public errors: WritableSignal<string[]> = signal<string[]>([]);
   public isErrorDialogOpened: WritableSignal<boolean> = signal<boolean>(false);
+  public isOrderDialogOpened: WritableSignal<boolean> = signal<boolean>(false);
 
   onServicesSelected(service: string): void {
     this.selectedServices.update((services) => {
@@ -81,5 +84,13 @@ export class MainComponent {
 
   onDialogClosed() {
     this.isErrorDialogOpened.set(false);
+  }
+
+  onDialogOrderOpened() {
+    this.isOrderDialogOpened.set(true);
+  }
+
+  onDialogOrderClosed() {
+    this.isOrderDialogOpened.set(false);
   }
 }

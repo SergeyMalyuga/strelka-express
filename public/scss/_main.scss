@@ -398,12 +398,11 @@ input[type='checkbox'] {
   margin-bottom: 36.84px;
 }
 
-.order-form__submit {
+.order-form__submit, .dialog-order__submit {
   display: block;
   border: none;
   box-sizing: border-box;
   padding: 14px 35px;
-  //color: variables.$light-text-color;
   font-size: 17px;
   font-weight: 400;
   line-height: 24.29px;

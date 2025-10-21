@@ -1,4 +1,4 @@
-<dialog class="dialog-order" open>
+<dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isOpen" class="dialog-order" open>
   <form class="dialog-order__form">
     <div class="dialog-order__column">
       <fieldset class="city dialog-order__fieldset">
@@ -47,6 +47,10 @@
         <textarea id="pickup-address" name="address"></textarea>
       </fieldset>
     </div>
-
+<button class="dialog-order__submit">Отправить заявку</button>
   </form>
+  <button appDialogClose class="dialog__close">
+    <span class="line_left"></span>
+    <span class="line_right"></span>
+  </button>
 </dialog>

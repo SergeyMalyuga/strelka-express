@@ -182,3 +182,8 @@ dialog {
     border-radius: 5px;
   }
 }
+
+.flatpickr-wrapper {
+  display: flex;
+  flex-direction: column;
+}
