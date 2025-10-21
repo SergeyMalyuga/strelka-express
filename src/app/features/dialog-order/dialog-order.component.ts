@@ -1,5 +1,4 @@
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   EventEmitter,
@@ -9,9 +8,6 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import flatpickr from 'flatpickr';
-import { Instance } from 'flatpickr/dist/types/instance';
-import { Russian } from 'flatpickr/dist/l10n/ru.js';
 import { AppDialogShow } from '../../shared/directives/open-dialog.component';
 import { DialogCloseDirective } from '../../shared/directives/dialog-close.directive';
 import {
@@ -21,23 +17,31 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Subject, takeUntil } from 'rxjs';
+import { FlatpickrDirective } from './directives/flatpickr.directive';
 
 @Component({
   selector: 'app-dialog-order',
-  imports: [AppDialogShow, DialogCloseDirective, FormsModule, ReactiveFormsModule],
+  imports: [
+    AppDialogShow,
+    DialogCloseDirective,
+    FormsModule,
+    ReactiveFormsModule,
+    FlatpickrDirective,
+  ],
   templateUrl: './dialog-order.component.html',
   styleUrl: './dialog-order.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DialogOrderComponent implements AfterViewInit, OnDestroy, OnInit {
+export class DialogOrderComponent implements OnDestroy, OnInit {
   @Input({ required: true }) set isOpen(value: boolean) {
     this._isOpen = value;
   }
   @Output() dialogClosed = new EventEmitter<void>();
 
   private _isOpen = false;
-  private flatPickr: Instance | undefined;
   private fb: FormBuilder = inject(FormBuilder);
+  private destroySubject: Subject<void> = new Subject<void>();
 
   public orderGroup: FormGroup = this.fb.group({
     city: ['', Validators.required],
@@ -54,30 +58,22 @@ export class DialogOrderComponent implements AfterViewInit, OnDestroy, OnInit {
     return this._isOpen;
   }
 
-  ngAfterViewInit(): void {
-    this.flatPickr = flatpickr('#deliveryDate', {
-      dateFormat: 'Y-m-d',
-      minDate: new Date(),
-      static: true,
-      inline: true,
-      locale: Russian,
-    }) as Instance;
-  }
-
   ngOnInit(): void {
-    this.orderGroup.get('pickup')?.valueChanges.subscribe((value: any) => {
-      if (value === 'Yes') {
-        this.orderGroup.get('address')?.enable();
-      } else {
-        this.orderGroup.get('address')?.disable();
-      }
-    });
+    this.orderGroup
+      .get('pickup')
+      ?.valueChanges.pipe(takeUntil(this.destroySubject))
+      .subscribe((value: any) => {
+        if (value === 'Yes') {
+          this.orderGroup.get('address')?.enable();
+        } else {
+          this.orderGroup.get('address')?.disable();
+        }
+      });
   }
 
   ngOnDestroy(): void {
-    if (this.flatPickr) {
-      this.flatPickr.destroy();
-    }
+    this.destroySubject.next();
+    this.destroySubject.complete();
   }
 
   onKeyDowned() {
