@@ -26,9 +26,12 @@ export class AppDialogShow implements OnChanges, OnDestroy {
     if (changes['isOpen']) {
       if (this.isOpen) {
         element.showModal();
+        element.classList.add('is-open');
+
         this.bodyManagerService.setBodyOverflow(true);
       } else {
-        element.close();
+        element.classList.remove('is-open');
+        setTimeout(() => element.close(), 300);
         this.bodyManagerService.setBodyOverflow(false);
       }
     }

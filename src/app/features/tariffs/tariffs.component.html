@@ -81,7 +81,13 @@
       </li>
     </ul>
   </div>
-  <dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isDialogOpened()">
+  <dialog
+    class="without-animation"
+    appDialogShow
+    appDialogClose
+    (dialogClosed)="onKeyDowned()"
+    [isOpen]="isDialogOpened()"
+  >
     <div class="dialog-tariffs__title-wrapper">
       <h3 class="dialog__title">Оставьте заявку</h3>
       <p>Мы с свяжемся с вами!</p>

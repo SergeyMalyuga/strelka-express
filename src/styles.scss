@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use '../public/scss/main';
 
-
 *,
 *::before,
 *::after {
@@ -186,4 +185,17 @@ dialog {
 .flatpickr-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+dialog.without-animation {
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+dialog.is-open.without-animation {
+  opacity: 1;
+  transform: scale(1);
 }

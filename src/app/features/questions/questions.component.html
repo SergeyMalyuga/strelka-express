@@ -38,7 +38,13 @@
   >
     Задать вопрос
   </button>
-  <dialog appDialogShow appDialogClose (dialogClosed)="onKeyDowned()" [isOpen]="isDialogOpened()">
+  <dialog
+    class="without-animation"
+    appDialogShow
+    appDialogClose
+    (dialogClosed)="onKeyDowned()"
+    [isOpen]="isDialogOpened()"
+  >
     <h3 class="dialog__title">Задать вопрос</h3>
     <button appDialogClose class="dialog__close">
       <span class="line_left"></span>

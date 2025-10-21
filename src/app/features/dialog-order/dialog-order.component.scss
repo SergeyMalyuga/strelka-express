@@ -44,8 +44,8 @@
   padding: 0;
 }
 
-.cargo-pickup, .packaging {
-
+.cargo-pickup,
+.packaging {
   legend {
     color: #333;
     font-size: 17px;
@@ -55,7 +55,8 @@
   }
 }
 
-.count, .cargo-volume {
+.count,
+.cargo-volume {
   width: 150px;
 
   input {
@@ -80,5 +81,3 @@
 hr {
   margin-bottom: 30px;
 }
-
-

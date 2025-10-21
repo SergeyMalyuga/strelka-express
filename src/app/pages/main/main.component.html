@@ -57,7 +57,13 @@
   <nav class="main-header__nav">
     <ul class="main-header__nav-list">
       <li class="main-header__nav-item">
-        <button appOpenDialogQuestions (dialogOpened)="onDialogOrderOpened()" class="main-header__nav-link">Оформить заявку</button>
+        <button
+          appOpenDialogQuestions
+          (dialogOpened)="onDialogOrderOpened()"
+          class="main-header__nav-link"
+        >
+          Оформить заявку
+        </button>
       </li>
       <li class="main-header__nav-item">
         <a href="#fulfillment" class="main-header__nav-link">Фулфилмент</a>
@@ -81,7 +87,10 @@
   </nav>
 </header>
 <main>
-  <app-dialog-order [isOpen]="isOrderDialogOpened()" (dialogClosed)="onDialogOrderClosed()"></app-dialog-order>
+  <app-dialog-order
+    [isOpen]="isOrderDialogOpened()"
+    (dialogClosed)="onDialogOrderClosed()"
+  ></app-dialog-order>
   <section class="order">
     <div class="order__content">
       <form

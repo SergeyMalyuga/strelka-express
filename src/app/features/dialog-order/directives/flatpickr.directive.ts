@@ -21,8 +21,8 @@ export class FlatpickrDirective implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if(this.flatPickr) {
-      this.flatPickr?.destroy()
+    if (this.flatPickr) {
+      this.flatPickr?.destroy();
     }
   }
 }
