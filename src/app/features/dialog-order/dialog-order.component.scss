@@ -2,9 +2,16 @@
 
 .dialog-order {
   width: 1140px;
+  padding: 10px;
 
   legend {
     margin-bottom: 20px;
+    color: rgba(102, 51, 153, 1);
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0;
   }
 
   input {
@@ -14,13 +21,20 @@
   label {
     display: flex;
     gap: 5px;
+    font-size: 17px;
   }
-
 }
 
-.dialog-order__form {
+
+
+.dialog-order__column {
   display: flex;
-  gap: 60px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -30,6 +44,40 @@
   flex-direction: column;
   border: none;
   padding: 0;
+}
+
+
+.cargo-pickup, .packaging {
+
+  legend {
+    color: #333;
+    font-size: 17px;
+    line-height: 16.8px;
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+}
+
+.count, .cargo-volume {
+width: 150px;
+
+  input {
+    width: 150px;
+  }
+}
+
+.pickup-address {
+  width: 307.88px;
+  margin: 0;
+
+  textarea {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+hr {
+  margin-bottom: 30px;
 }
 
 

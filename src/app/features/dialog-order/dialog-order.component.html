@@ -1,24 +1,52 @@
 <dialog class="dialog-order" open>
   <form class="dialog-order__form">
-    <fieldset class="city dialog-order__fieldset">
-      <legend>Выберете город отправки</legend>
-      <label><input type="radio" name="city" value="Москва">Москва</label>
-      <label><input type="radio" name="city" value="Казань">Казань</label>
-      <label><input type="radio" name="city" value="Тула">Тула</label>
-      <label><input type="radio" name="city" value="Рязань">Рязань</label>
-      <label><input type="radio" name="city" value="Новосемейкино">Новосемейкино</label>
-      <label><input type="radio" name="city" value="Котовск">Котовск</label>
-      <label><input type="radio" name="city" value="Краснодар">Краснодар</label>
-      <label><input type="radio" name="city" value="Невонномысск">Невонномысск</label>
-      <label><input type="radio" name="city" value="Нижний Новгород">Нижний Новгород</label>
-    </fieldset>
-    <fieldset class="warehouse dialog-order__fieldset">
-      <legend>Выберете склад</legend>
-      <label><input type="radio" name="warehouse" value="Wildberries">Wildberries</label>
-      <label><input type="radio" name="warehouse" value="Ozon">Ozon</label>
-      <label><input type="radio" name="warehouse" value="ЯндексМаркет">ЯндексМаркет</label>
-      <label><input type="radio" name="warehouse" value="">Мегамаркет</label>
-    </fieldset>
-    <input  id="deliveryDate" type="text">
+    <div class="dialog-order__column">
+      <fieldset class="city dialog-order__fieldset">
+        <legend>Выберете город отправки</legend>
+        <label><input type="radio" name="city" value="Москва">Москва</label>
+        <label><input type="radio" name="city" value="Казань">Казань</label>
+        <label><input type="radio" name="city" value="Тула">Тула</label>
+        <label><input type="radio" name="city" value="Рязань">Рязань</label>
+        <label><input type="radio" name="city" value="Новосемейкино">Новосемейкино</label>
+        <label><input type="radio" name="city" value="Котовск">Котовск</label>
+        <label><input type="radio" name="city" value="Краснодар">Краснодар</label>
+        <label><input type="radio" name="city" value="Невонномысск">Невонномысск</label>
+        <label><input type="radio" name="city" value="Нижний Новгород">Нижний Новгород</label>
+      </fieldset>
+      <fieldset class="warehouse dialog-order__fieldset">
+        <legend>Выберете склад</legend>
+        <label><input type="radio" name="warehouse" value="Wildberries">Wildberries</label>
+        <label><input type="radio" name="warehouse" value="Ozon">Ozon</label>
+        <label><input type="radio" name="warehouse" value="ЯндексМаркет">ЯндексМаркет</label>
+        <label><input type="radio" name="warehouse" value="">Мегамаркет</label>
+      </fieldset>
+      <input  id="deliveryDate" type="text">
+    </div>
+<hr>
+    <div class="dialog-order__column">
+      <fieldset class="packaging dialog-order__fieldset">
+        <legend>Вид упаковки</legend>
+        <label><input type="radio" name="packaging" value="Короба">Короба</label>
+        <label><input type="radio" name="packaging" value="Палеты">Паллеты</label>
+      </fieldset>
+      <fieldset class="count dialog-order__fieldset">
+        <label class="visually-hidden" for="count">Количество</label>
+        <input id="count" type="number" min="0" step="0.01" placeholder="Количество">
+      </fieldset>
+      <fieldset class="cargo-volume dialog-order__fieldset">
+        <label class="visually-hidden" for="volume">Oбъём груза в кубических метрах</label>
+        <input id="volume" type="number" min="0" step="0.01" placeholder="Объём груза м³">
+      </fieldset>
+      <fieldset class="cargo-pickup dialog-order__fieldset">
+        <legend>Требуется ли забор груза?</legend>
+        <label><input type="radio" name="pickup" value="Да">Да</label>
+        <label><input type="radio" name="pickup" value="Нет">Нет</label>
+      </fieldset>
+      <fieldset class="pickup-address dialog-order__fieldset">
+        <label for="pickup-address">Укажите адрес забора груза</label>
+        <textarea id="pickup-address" name="address"></textarea>
+      </fieldset>
+    </div>
+
   </form>
 </dialog>
